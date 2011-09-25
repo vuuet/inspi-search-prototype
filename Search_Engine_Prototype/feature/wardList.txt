@@ -1,0 +1,515 @@
+﻿thisisthedummystring
+bến nghé
+an khánh
+bến thành
+an lợi đông
+cô giang
+an phú
+cầu kho
+bình an
+cầu ông lãnh
+bình khánh
+đa kao
+bình trưng đông
+nguyễn thái bình
+bình trưng tây
+nguyễn cư trinh
+cát lái
+phạm ngũ lão
+thạnh mỹ lợi
+tân định
+thảo điền
+thủ thiêm
+bình thuận
+phú mỹ
+phú thuận
+tân hưng
+tân phong
+tân phú
+tân kiểng
+tân quy
+tân thuận đông
+tân thuận tây
+hiệp phú
+long bình
+long phước
+long trường
+long thạnh mỹ
+phú hữu
+phước bình
+phước long a
+phước long b
+tăng nhơn phú a
+tăng nhơn phú b
+tân phú
+trường thạnh
+an phú đông
+đông hưng thuận
+hiệp thành
+tân chánh hiệp
+tân thới hiệp
+tân thới nhất
+thạnh lôc
+thạnh xuân
+thới an
+trung mỹ tây
+tân hưng thuận
+bình chiểu
+bình thọ
+hiệp bình chánh
+hiệp bình phước
+linh chiểu
+linh đông
+linh tây
+linh trung
+linh xuân
+tam bình
+tam phú
+trường thọ
+hòa thạnh
+an lạc
+hiệp tân
+an lạc a
+phú thạnh
+bình hưng hòa
+phú thọ hòa
+bình hưng hòa a
+phú trung
+bình hưng hòa b
+sơn kỳ
+bình trị đông
+tân thành
+bình trị đông a
+tân thới hòa
+bình trị đông b
+tân quý
+tân tạo
+tân sơn nhì
+tân tạo a
+tây thạnh
+ben nghe
+an khanh
+ben thanh
+an loi dong
+co giang
+an phu
+cau kho
+binh an
+cau ong lanh
+binh khanh
+da kao
+binh trung dong
+nguyen thai binh
+binh trung tay
+nguyen cu trinh
+cat lai
+pham ngu lao
+thanh my loi
+tan dinh
+thao dien
+thu thiem
+binh thuan
+phu my
+phu thuan
+tan hung
+tan phong
+tan phu
+tan kieng
+tan quy
+tan thuan dong
+tan thuan tay
+hiep phu
+long binh
+long phuoc
+long truong
+long thanh my
+phu huu
+phuoc binh
+phuoc long a
+phuoc long b
+tang nhon phu a
+tang nhon phu b
+tan phu
+truong thanh
+an phu dong
+dong hung thuan
+hiep thanh
+tan chanh hiep
+tan thoi hiep
+tan thoi nhat
+thanh loc
+thanh xuan
+thoi an
+trung my tay
+tan hung thuan
+binh chieu
+binh tho
+hiep binh chanh
+hiep binh phuoc
+linh chieu
+linh dong
+linh tay
+linh trung
+linh xuan
+tam binh
+tam phu
+truong tho
+hoa thanh
+an lac
+hiep tan
+an lac a
+phu thanh
+binh hung hoa
+phu tho hoa
+binh hung hoa a
+phu trung
+binh hung hoa b
+son ky
+binh tri dong
+tan thanh
+binh tri dong a
+tan thoi hoa
+binh tri dong b
+tan quy
+tan tao
+tan son nhi
+tan tao a
+tay thanh
+cống vị
+điện biên
+đội cấn
+giảng võ
+kim mã
+liễu giai
+ngọc hà
+ngọc khánh
+nguyễn trung trực
+phúc xá
+quán thánh
+thành công
+trúc bạch
+vĩnh phúc
+dịch vọng
+dịch vọng hậu
+mai dịch
+nghĩa đô
+nghĩa tân
+quan hoa
+trung hoà
+yên hoà
+cát linh
+hàng bột
+khâm thiên
+khương thượng
+kim liên
+láng hạ
+láng thượng
+nam đồng
+ngã tư sở
+ô chợ dừa
+phương liên
+phương mai
+quang trung
+quốc tử giám
+thịnh quang
+thổ quan
+trung liệt
+trung phụng
+trung tự
+văn chương
+văn miếu
+biên giang
+dương nội
+đồng mai
+hà cầu
+kiến hưng
+la khê
+mỗ lao
+nguyễn trãi
+phú la
+phú lãm
+phú lương
+phúc la
+quang trung
+văn khê
+văn quán
+vạn phúc
+yên nghĩa
+yết kiêu ·
+bạch đằng
+bách khoa
+bạch mai
+bùi thị xuân
+cầu dền
+đống mác
+đồng nhân
+đồng tâm
+lê đại hành
+minh khai
+ngô thì nhậm
+nguyễn du
+phạm đình hổ
+phố huế
+quỳnh lôi
+quỳnh mai
+thanh lương
+thanh nhàn
+trương định
+vĩnh tuy ·
+chương dương độ
+cửa đông
+cửa nam
+đồng xuân
+hàng bạc
+hàng bài
+hàng bồ
+hàng bông
+hàng buồm
+hàng đào
+hàng gai
+hàng mã
+hàng trống
+lý thái tổ
+phan chu trinh
+phúc tân
+trần hưng đạo
+tràng tiền ·
+đại kim
+định công
+giáp bát
+hoàng liệt
+hoàng văn thụ
+lĩnh nam
+mai động
+tân mai
+thanh trì
+thịnh liệt
+trần phú
+tương mai
+yên sở
+vĩnh hưng ·
+bồ đề
+cự khối
+đức giang
+gia thụy
+giang biên
+long biên
+ngọc lâm
+ngọc thụy
+phúc đồng
+phúc lợi
+sài đồng
+thạch bàn
+thượng thanh
+việt hưng ·
+bưởi
+thụy khuê
+yên phụ
+tứ liên
+nhật tân
+quảng an
+xuân la
+phú thượng
+hạ đình
+khương đình
+khương mai
+khương trung
+kim giang
+nhân chính
+phương liệt
+thanh xuân bắc
+thanh xuân nam
+thanh xuân trung
+thượng đình
+lê lợi
+ngô quyền
+phú thịnh
+quang trung
+sơn lộc
+xuân khanh
+trung hưng
+trung sơn trầm
+viên sơn
+cong vi
+dien bien
+doi can
+giang vo
+kim ma
+lieu giai
+ngoc ha
+ngoc khanh
+nguyen trung truc
+phuc xa
+quan thanh
+thanh cong
+truc bach
+vinh phuc
+dich vong
+dich vong hau
+mai dich
+nghia do
+nghia tan
+quan hoa
+trung hoa
+yen hoa
+cat linh
+hang bot
+kham thien
+khuong thuong
+kim lien
+lang ha
+lang thuong
+nam dong
+nga tu so
+o cho dua
+phuong lien
+phuong mai
+quang trung
+quoc tu giam
+thinh quang
+tho quan
+trung liet
+trung phung
+trung tu
+van chuong
+van mieu
+bien giang
+duong noi
+dong mai
+ha cau
+kien hung
+la khe
+mo lao
+nguyen trai
+phu la
+phu lam
+phu luong
+phuc la
+quang trung
+van khe
+van quan
+van phuc
+yen nghia
+yet kieu ·
+bach dang
+bach khoa
+bach mai
+bui thi xuan
+cau den
+dong mac
+dong nhan
+dong tam
+le dai hanh
+minh khai
+ngo thi nham
+nguyen du
+pham dinh ho
+pho hue
+quynh loi
+quynh mai
+thanh luong
+thanh nhan
+truong dinh
+vinh tuy ·
+chuong duong do
+cua dong
+cua nam
+dong xuan
+hang bac
+hang bai
+hang bo
+hang bong
+hang buom
+hang dao
+hang gai
+hang ma
+hang trong
+ly thai to
+phan chu trinh
+phuc tan
+tran hung dao
+trang tien ·
+dai kim
+dinh cong
+giap bat
+hoang liet
+hoang van thu
+linh nam
+mai dong
+tan mai
+thanh tri
+thinh liet
+tran phu
+tuong mai
+yen so
+vinh hung ·
+bo de
+cu khoi
+duc giang
+gia thuy
+giang bien
+long bien
+ngoc lam
+ngoc thuy
+phuc dong
+phuc loi
+sai dong
+thach ban
+thuong thanh
+viet hung ·
+buoi
+thuy khue
+yen phu
+tu lien
+nhat tan
+quang an
+xuan la
+phu thuong
+ha dinh
+khuong dinh
+khuong mai
+khuong trung
+kim giang
+nhan chinh
+phuong liet
+thanh xuan bac
+thanh xuan nam
+thanh xuan trung
+thuong dinh
+le loi
+ngo quyen
+phu thinh
+quang trung
+son loc
+xuan khanh
+trung hung
+trung son tram
+phường 5
+phường 15
+phường 12
+phường 8
+phường 1
+phường 14
+phường 6
+phường 3
+phường 2
+phường 4
+phường 28
+phường 11
+phường 10
+phường 7
+phường 9
+phường 19
+phường 13
+phường 25
+phường 16
+phường 64
+phường 78
+phường 17
+phường 04
+phường 42
+phường 08
+phường 26
+phường 27
+phường 18
+phường 01
