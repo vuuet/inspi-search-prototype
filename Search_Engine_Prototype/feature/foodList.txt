@@ -359,3 +359,8 @@ chả_rươi
 miến_xào
 nem_nướng
 tôm_khô
+nhà_hàng
+kfc
+bar
+nhậu
+nướng

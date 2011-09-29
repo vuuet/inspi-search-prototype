@@ -166,6 +166,12 @@ public class Main
 			queryString = queryString.replace(replacement, "");
 		}
 		
+		ArrayList<String> relatedLocation = getRelatedLocation(foodFeatureFromQuery, config);
+		for(int i = 0; i < relatedLocation.size(); i++)
+		{
+			result.add(relatedLocation.get(i));
+		}
+		
 		queryString = queryString.trim();
 		String complementaryPartFromQuery = getComplementaryFeatureID(queryString, config.getComplementaryFeature());
 		if(!complementaryPartFromQuery.isEmpty())
@@ -241,7 +247,7 @@ public class Main
 			values[0] = component[0];
 			values[1] = foodFeatureFromPlace.get(i)[0];
 			values[2] = "1";
-			values[3] = "2";
+			values[3] = "5";
 			values[4] = "1";
 			
 			insertStatement.setAttributeValues(values);
@@ -254,6 +260,7 @@ public class Main
 		
 		component[1] = component[1].trim();
 		
+		//Complementary Part
 		if(!component[1].isEmpty())
 		{
 			String[] complementaryFromPlace = complementaryFeature(component[1], config.getComplementaryFeature());
@@ -266,7 +273,7 @@ public class Main
 			values[0] = component[0];
 			values[1] = complementaryFromPlace[0];
 			values[2] = "1";
-			values[3] = "2";
+			values[3] = "3";
 			values[4] = "1";
 			
 			insertStatement.setAttributeValues(values);
@@ -274,6 +281,7 @@ public class Main
 			result.add(insertStatement.toInsertStatement());
 		}
 		
+		//Get District
 		String[] districtFeatureFromPlace = districtFeature(component[2], config.getDistrictFeature());
 		if(districtFeatureFromPlace[0] != null)
 		{
@@ -295,6 +303,7 @@ public class Main
 			component[2] = component[2].replace(districtFeatureFromPlace[1], "");
 		}
 		
+		//Get Ward
 		String[] wardFeatureFromPlace = wardFeature(component[2], config.getWardFeature());
 		if(wardFeatureFromPlace[0] != null)
 		{	
@@ -316,6 +325,7 @@ public class Main
 			component[2] = component[2].replace(wardFeatureFromPlace[1], "");
 		}
 		
+		//Get Street
 		String[] streetFeatureFromPlace = streetFeature(component[2], config.getStreetFeature());
 		if(streetFeatureFromPlace[0] != null)
 		{
@@ -817,6 +827,28 @@ public class Main
 		}
 		
 		return result;
+	}
+	
+	public static ArrayList<String> getRelatedLocation (ArrayList<String[]> foodFeatureFromQuery, QueryConfig config)
+	{
+		ArrayList<String> relatedPlace = new ArrayList<String>();
+		
+		for(int i = 0; i < foodFeatureFromQuery.size(); i++)
+		{
+			for(int j = 0; j < config.getKeywordMatrixFeature().size(); j++)
+			{
+				if(foodFeatureFromQuery.get(i)[0].equals(config.getKeywordMatrixFeature().get(j)[0]))
+				{
+					for(int k = 0; k < config.getKeywordMatrixFeature().get(j).length; k++)
+					{
+						relatedPlace.add(config.getKeywordMatrixFeature().get(j)[k]);
+					}
+				}
+			}
+			
+		}
+		
+		return relatedPlace;
 	}
 	
 	public static void main(String[] args)
