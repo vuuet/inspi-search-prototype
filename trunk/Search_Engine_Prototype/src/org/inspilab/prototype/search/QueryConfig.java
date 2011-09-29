@@ -22,11 +22,12 @@ public class QueryConfig
 	private String dbName;
 	private String dbUsername;
 	private String dbPassword;
-	private String foodFilePath;
+	private static String foodFilePath;
 	private static String districtFilePath;
 	private static String wardFilePath;
 	private static String streetFilePath;
 	private static String complementaryFilePath;
+	private static String keywordMatrixFilePath;
 	private Connection con;
 	private static VietTokenizer vnTokEngine;	
 	private static ArrayList<String> foodFeature;
@@ -34,6 +35,7 @@ public class QueryConfig
 	private static ArrayList<String> wardFeature;
 	private static ArrayList<String> streetFeature;
 	private static ArrayList<String> complementaryFeature;
+	private static ArrayList<String[]> keywordMatrixFeature;
 	
 	public QueryConfig(int type)
 	{
@@ -43,12 +45,14 @@ public class QueryConfig
 		wardFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "wardList.txt";
 		streetFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "streetList.txt";
 		complementaryFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "complementaryList.txt";
+		keywordMatrixFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "keywordMatrix.txt";
 		
 		foodFeature = readFileToArrayList(foodFilePath);
 		districtFeature = readFileToArrayList(districtFilePath);
 		wardFeature = readFileToArrayList(wardFilePath);
 		streetFeature = readFileToArrayList(streetFilePath);
 		complementaryFeature = readFileToArrayList(complementaryFilePath);
+		keywordMatrixFeature = readFiletoArrayList_2(keywordMatrixFilePath);
 		
 		if(type == 0)
 		{
@@ -147,7 +151,7 @@ public class QueryConfig
 		return arrList;
 	}
 	
-	private ArrayList<String[]> readFeatureFile(String filePath)
+	private ArrayList<String[]> readFiletoArrayList_2(String filePath)
 	{
 		ArrayList<String[]> result = new ArrayList<String[]>();
 		
@@ -156,6 +160,8 @@ public class QueryConfig
 			BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream(filePath), "UTF-8"));
 			
 			String line = null;
+			
+			reader.readLine();
 			
 			while((line = reader.readLine()) != null)
 			{
@@ -271,10 +277,10 @@ public class QueryConfig
 		return dbUsername;
 	}
 
-	public void setFoodFilePath(String foodFilePath) {
-		this.foodFilePath = foodFilePath;
+	public void setFoodFilePath(String inputFoodFilePath) {
+		foodFilePath = inputFoodFilePath;
 		
-		foodFeature = readFileToArrayList(this.foodFilePath);
+		foodFeature = readFileToArrayList(foodFilePath);
 	}
 
 	public String getFoodFilePath() {
@@ -316,5 +322,19 @@ public class QueryConfig
 	
 	public String getStreetFilePath() {
 		return streetFilePath;
+	}
+	
+	public void setKeywordMatrixFilePath(String inputKeywordMatrixFilePath) {
+		keywordMatrixFilePath = inputKeywordMatrixFilePath;
+		
+		readFiletoArrayList_2(keywordMatrixFilePath);
+	}
+	
+	public String getKeywordMatrixFilePath() {
+		return keywordMatrixFilePath;
+	}
+
+	public ArrayList<String[]> getKeywordMatrixFeature() {
+		return keywordMatrixFeature;
 	}
 }

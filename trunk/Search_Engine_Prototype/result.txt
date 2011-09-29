@@ -1,6 +1,27 @@
-Test case: ﻿hủ tiếu mì
-2482	Hủ Tiếu Mì - Hoành Thánh	2	1
-570	Quán Hủ Tiếu Mì Đạt Phong	2	1
-1311	Hủ Tiếu Mì Bảy Dưỡng 1	2	1
-2073	Hủ tiếu mì Lưu xá	2	1
+Test case: ﻿quán cơm
+3103	Quán Cơm - Bún Hẽm	4	2
+574	Quán Cơm Gà Hải Nam	4	2
+3351	Quán Cơm tấm - Cháo lòng Hướng Dương	4	2
+930	Quán Cơm Gà Xối Mỡ	4	2
+1051	Quán Cơm Gà Hải Nam	4	2
+1853	Quán Cơm Tấm	4	2
+3246	Quán Cơm Tấm	4	2
+1905	Quán Cơm chiên Dương Châu	4	2
+2358	Quán cơm bò bằm	4	2
+162	Cơm Gà Hải Nam - Văn Xương	2	1
+360	Cơm Tấm Mộc	2	1
+511	Quán Sủi cảo	2	1
+720	Quán Cơm gà Bà Luận Tam Kỳ	2	1
+842	Quán Cơm Mộc	2	1
+972	Quán Thịt Thỏ	2	1
+1122	Quán Cháo Lòng	2	1
+1215	Quán Bánh Bèo	2	1
+1346	Quán Cơm gà cali	2	1
+1420	Quán Cơm Hoàng Vân 1	2	1
+1555	Quán Hủ tiếu sa tế	2	1
 
+Test case: kfc
+No result found
+
+Test case: bar
+No result found
