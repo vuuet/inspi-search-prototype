@@ -43,7 +43,8 @@ public class Main
 				output += resultSet.get(i)[0] + "\t" 
 							+ resultSet.get(i)[1] + "\t"
 							+ resultSet.get(i)[2] + "\t"
-							+ resultSet.get(i)[3] + "\n";
+							+ resultSet.get(i)[4] + "\t"
+							+ resultSet.get(i)[4] + "\n";
 			}
 		}
 		else
@@ -57,61 +58,35 @@ public class Main
 	public static ArrayList<String[]> getLocation(String queryString, QueryConfig config)
 	{
 		ArrayList<String[]> resultSet = new ArrayList<String[]>();
-		
-		ArrayList<String> queryArr = getQueryAttribute(queryString, config);
-		
-		if(queryArr.size() == 0)
-		{
-			return resultSet;
-		}
-		
-		String docmtAttributeVector = "(";
-		
-		for(int i = 0; i < queryArr.size(); i++)
-		{
-			if(i != queryArr.size() - 1)
-			{
-				docmtAttributeVector += queryArr.get(i) + ", ";
-			}
-			else
-			{
-				docmtAttributeVector += queryArr.get(i);
-			}
-		}
-		
-		docmtAttributeVector += ")";
 				
 		try 
 		{	
-			/*
-			String SQL =			
-				"select P.id, P.name, sumScore, sumIm from place as P,	" +
-				"(select place_id, sum(score) sumScore, sum(importancy) as sumIm " +
-				"from `x1_place_feature_value` where attribute_id in "	+				
-				docmtAttributeVector + " group by place_id) as S where P.id = S.place_id " +
-				"order by sumIm desc, sumScore desc";
-			*/
+			String SQL = getQueryStatement(queryString, config);
 			
-			String SQL =			
-				"select P.id, P.name, sumScore, sumIm from place as P,	" +
-				"(select place_id, sum(score) sumScore, sum(importancy) as sumIm " +
-				"from `place_attribute_value` where attribute_id in "	+				
-				docmtAttributeVector + " group by place_id) as S where P.id = S.place_id " +
-				"order by sumIm desc, sumScore desc";
-				
+			System.out.println(SQL);
+			
 			Statement stmt = config.getConnection().createStatement();
 			
 			ResultSet rs = stmt.executeQuery(SQL);
 			
+			System.out.println(rs.next());
+			
 			while(rs.next())
-			{
-				String[] newResult = new String[4];
+			{				
+				String[] newResult = new String[5];
 				
-				newResult[0] = rs.getString("id");
+				newResult[0] = rs.getString(1);
+				newResult[1] = rs.getString(2);
+				newResult[2] = rs.getString(3);
+				newResult[3] = rs.getString(4);
+				newResult[4] = rs.getString(5);
+				
+				/*newResult[0] = rs.getString("id");
 				newResult[1] = rs.getString("name");
-				newResult[2] = rs.getString("sumScore");
-				newResult[3] = rs.getString("sumIm");
-				
+				newResult[2] = rs.getString("address");
+				newResult[3] = rs.getString("total_score");
+				newResult[4] = rs.getString("importancy");
+				*/
 				resultSet.add(newResult);
 			}
 			
@@ -181,7 +156,150 @@ public class Main
 	
 		return result;
 	}
+	
+	public static String getQueryStatement(String queryString, QueryConfig config)
+	{
+		String sqlStatement = "";
+		
+		//Getting query Attribute
+		ArrayList<String> queryArr = new ArrayList<String>();
+		
+		String[] districtFeatureFromQuery = districtFeature(queryString, config.getDistrictFeature());
+		if(districtFeatureFromQuery[0] != null)
+		{
+			queryArr.add(districtFeatureFromQuery[2]);
+			queryString = queryString.replace(districtFeatureFromQuery[1], "");
+		}
+		
+		String[] wardFeatureFromQuery = wardFeature(queryString, config.getWardFeature());
+		if(wardFeatureFromQuery[0] != null)
+		{
+			queryArr.add(wardFeatureFromQuery[2]);
+			queryString = queryString.replace(wardFeatureFromQuery[1], "");
+		}
+		
+		String[] streetFeatureFromQuery = streetFeature(queryString, config.getStreetFeature());
+		if(streetFeatureFromQuery[0] != null)
+		{
+			queryArr.add(streetFeatureFromQuery[0]);
+			queryString = queryString.replace(streetFeatureFromQuery[1], "");
+		}
+		
+		String numberFeatureFromQuery = numberFeature(queryString);
+		if(numberFeatureFromQuery != null)
+		{
+			queryString = queryString.replace(numberFeatureFromQuery, "");
+		}
+		
+		ArrayList<String[]> foodFeatureFromQuery = foodFeature(queryString, config.getFoodFeature(), config.getVnTokEngine());
+		for(int i = 0; i < foodFeatureFromQuery.size(); i++)
+		{
+			queryArr.add(foodFeatureFromQuery.get(i)[0]);
+			
+			String replacement = foodFeatureFromQuery.get(i)[1].replace("_", " ");
+			queryString = queryString.replace(replacement, "");
+		}
+		
+		ArrayList<String> relatedLocation = getRelatedLocation(foodFeatureFromQuery, config);
+		for(int i = 0; i < relatedLocation.size(); i++)
+		{
+			queryArr.add(relatedLocation.get(i));
+		}
+		
+		queryString = queryString.trim();
 
+		//Old version of get complementary part 3 - 10 - 2011, using like statment instead
+		/*String complementaryPartFromQuery = getComplementaryFeatureID(queryString, config.getComplementaryFeature());
+		if(!complementaryPartFromQuery.isEmpty())
+		{
+			queryArr.add(complementaryPartFromQuery);
+		}*/
+		//Done with getting query attribute
+		
+		if(queryArr.size() == 0)
+		{
+			sqlStatement = 
+				"select P.id, name, address from place as P, (" +
+				getAlternateSQLStatement(queryString) + ") as S where P.id = S.id";
+
+			/*
+			sqlStatement = 
+			"select P.id, name, address, 1 as total_score, 1 as importancy from place as P, (" +
+			getAlternateSQLStatement(queryString) + ") as S where P.id = S.id";
+			*/
+		}
+		else
+		{
+			String alternateSLQ = getAlternateSQLStatement(queryString);
+			
+			String docmtAttributeVector = "(";
+			
+			for(int i = 0; i < queryArr.size(); i++)
+			{
+				if(i != queryArr.size() - 1)
+				{
+					docmtAttributeVector += queryArr.get(i) + ", ";
+				}
+				else
+				{
+					docmtAttributeVector += queryArr.get(i);
+				}
+			}
+			
+			docmtAttributeVector += ")";
+			
+			if(!alternateSLQ.isEmpty())
+			{
+				sqlStatement = 
+					"select K.id, K.name, K.address, K.total_score, K.importancy from " +	
+					"(" +
+						"select P.id, P.name, P.address, total_score, importancy from place as P,	" +
+						"(" +
+							"select place_id, sum(score) total_score, sum(importancy) as importancy " +
+							"from `place_attribute_value` where attribute_id in "	+				
+							docmtAttributeVector + " group by place_id" +
+						") as S where P.id = S.place_id" +
+					") as K " +
+					"inner join " +
+					"(" + alternateSLQ + ") as C using (id) " +
+					"order by importancy desc, total_score desc";
+			}
+			else
+			{
+				sqlStatement = 
+					"select P.id, P.name, P.address, total_score, importancy from place as P,	" +
+						"(" +
+							"select place_id, sum(score) total_score, sum(importancy) as importancy " +
+							"from `place_attribute_value` where attribute_id in "	+				
+							docmtAttributeVector + " group by place_id" +
+						") as S where P.id = S.place_id " +
+					"order by importancy desc, total_score desc";
+			}
+		}
+		
+		return sqlStatement;
+	}
+	
+	public static String getAlternateSQLStatement(String complementaryPart)
+	{
+		String result = "";
+		
+		if(!complementaryPart.isEmpty())
+		{
+			String[] complementaryComponent = complementaryPart.split(" ");
+			String likeStatment = "complementary_value like \"%" + complementaryComponent[0] + "%\"";
+			
+			for(int i = 1; i < complementaryComponent.length; i++)
+			{
+				likeStatment += " and complementary_value like \"%" + complementaryComponent[i] + "%\"";	
+			}
+			
+			result = "select id from place_complementary where " + likeStatment;
+		}
+
+		return result;
+	}
+	
 	public static ArrayList<String> alphaTest_addLocation(String locationInfo, QueryConfig config)
 	{
 		ArrayList<String> resultSet = null;
@@ -263,6 +381,8 @@ public class Main
 		//Complementary Part
 		if(!component[1].isEmpty())
 		{
+			String complementaryInsertStatement = getComplementaryInsertStatement(component[1], component[0]);
+	
 			String[] complementaryFromPlace = complementaryFeature(component[1], config.getComplementaryFeature());
 			
 			if(complementaryFromPlace[2] != null && complementaryFromPlace[2].equals("1"))
@@ -279,6 +399,7 @@ public class Main
 			insertStatement.setAttributeValues(values);
 			
 			result.add(insertStatement.toInsertStatement());
+			result.add(complementaryInsertStatement);
 		}
 		
 		//Get District
@@ -851,9 +972,26 @@ public class Main
 		return relatedPlace;
 	}
 	
+	public static String getComplementaryInsertStatement(String complemtaryPart, String placeID)
+	{
+		DataContainer insertStatement = new DataContainer();
+		
+		insertStatement.setContainerName("place_complementary");
+		insertStatement.setAttributeNames(new String[]{"id", "complementary_value"});
+		
+		String[] values = new String[2];
+		
+		values[0] = placeID;
+		values[1] = complemtaryPart;
+		
+		insertStatement.setAttributeValues(values);
+		
+		return insertStatement.toInsertStatement();
+	}
+	
 	public static void main(String[] args)
 	{		
-		QueryConfig config = new QueryConfig(1);
+		QueryConfig config = new QueryConfig(0);
 		
 		FileInputStream fis = null;
 		FileOutputStream fos = null;
@@ -880,17 +1018,22 @@ public class Main
 			writer = new BufferedWriter(outputStream);
 			
 			String line = null;
-			
+					
 			try
 			{
+				reader.readLine();
+				
 				while((line = reader.readLine()) != null)
 				{	
 					line = line.toLowerCase();
 					
-					writer.write("Test case: " + line + "\n");
-					writer.write(alphaTest(line, config) + "\n");			
-				}	
-				
+					if(!line.isEmpty())
+					{
+						writer.write("Test case: " + line + "\n");
+						writer.write(alphaTest(line, config) + "\n");
+					}
+	
+				}		
 			}
 			finally
 			{
@@ -904,6 +1047,7 @@ public class Main
 		}
 	
 	}
+
 	
 	/*
 	public static void main(String[] args)

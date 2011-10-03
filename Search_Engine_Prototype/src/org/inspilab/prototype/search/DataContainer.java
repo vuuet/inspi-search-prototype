@@ -37,11 +37,11 @@ public class DataContainer {
 		{
 			if(i != attributeValues.length - 1)
 			{
-				attributeValuesList += attributeValues[i] + ", ";	
+				attributeValuesList += "\"" + attributeValues[i] + "\"" + ", ";	
 			}
 			else
 			{
-				attributeValuesList += attributeValues[i] + ")";
+				attributeValuesList += "\"" + attributeValues[i] + "\"" + ")";
 			}
 		}
 		
