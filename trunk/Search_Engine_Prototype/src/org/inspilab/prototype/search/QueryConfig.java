@@ -56,7 +56,7 @@ public class QueryConfig
 		
 		if(type == 0)
 		{
-			dbName = "jdbc:mysql://localhost:3306/inspilab_local";
+			dbName = "jdbc:mysql://localhost:3306/inspilab_local?useUnicode=yes&characterEncoding=UTF-8";
 			dbUsername = "root";
 			dbPassword = "root";
 			
