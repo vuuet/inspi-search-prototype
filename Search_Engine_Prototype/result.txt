@@ -1,38 +1,34 @@
 Test case: quán cơm
-3498	Quán Cơm Hải Sư Singapo	(Giảng võ)	1	1
-456	Quán Cơm 12H	(49 Trần Nhật Duật)	1	1
-1420	Quán Cơm Hoàng Vân 1	(46-47/3 Đông Tân)	1	1
-2162	Quán Cơm Đồng Quê	(370 Nơ trang Long)	1	1
-2656	Quán Cơm Tám Đồng Xuân	(21 Trần Cao Vân)	1	1
-3103	Quán Cơm	Bún Hẽm	1	1
-3674	Quán Cơm Ngon Miệng	(548 La Thành)	1	1
-740	Quán cơm sinh viên Sài Gòn	(7A/136 Thành Thái)	1	1
-1525	Quán Cơm Ba Nghiền	(Đặng Văn Ngữ)	1	1
-2195	Quán Cơm 2000đ	(Cư Xá Lữ Gia)	1	1
-2690	Quán Cơm 152	(152 Hồ Bá Kiện)	1	1
-3150	Quán Cơm Bánh Thuẩn	(Ngã Tư Nguyễn Tri Phương – 3/2)	1	1
-3939	Quán Cơm Tám	(Nguyễn Trãi cách đại học Hà nội 300m về phía Hà Đông)	1	1
-772	Quán Cơm Cháy ITC	(Vỉa hè trước ITC	1	1
-1618	Quán Cơm 132	(132p Lê Văn Thọ)	1	1
-2297	Quán Cơm Minh Đức	(100 Tôn Thất Tùng)	1	1
-2741	Quán Cơm Bào Hân	(Lầu 5 Zen Plaza 54-56 Nguyễn Trãi)	1	1
-3180	Quán Cơm 181	(181 Nguyễn Thái Học)	1	1
 4201	Quán Cơm 16	(77 Võ Văn Tần)	1	1
 842	Quán Cơm Mộc	(17 Đồng Nai)	1	1
+1687	Quán Cơm 19	(19 Ngô Đức Kế)	1	1
+2358	Quán cơm bò bằm	(hẻm gần trường PTTH Phan Đăng Lưu)	1	1
+2792	Quán Cơm Số 5	(5 Dân Trí)	1	1
+3180	Quán Cơm 181	(181 Nguyễn Thái Học)	1	1
+3257	quán cơm Nguyêt Nga	(453/67 kb LE VAN SY)	1	1
+4295	Quán Cơm Nam Thạnh Lầu	(50 Nguyễn Thị Minh Khai)	1	1
+908	Quán Cơm Số 7	(Góc Đường Lê Lai Nguyễn Văn Tráng)	1	1
+1849	Quán Cơm Huỳnh Mai	(357 Nguyễn Thiện Thuật)	1	1
+2435	Quán Cơm Thanh Hài	(168 Bùi Viện Q.1)	1	1
+2836	Quán cơm Lão Hương Thân	(32 Ngô Quyền P7 Q5)	1	1
+3362	Quán Cơm Thăng Long	(14 Trương Công Định)	1	1
+1106	Quán Cơm Vương	(66-68 Rạch Bùng Binh)	1	1
+1875	Quán Cơm Dinh Dưỡng	(Bùi Thị Xuân)	1	1
+2543	Quán Cơm 33	(33 Phan Xích Long)	1	1
+2857	Quán cơm A Dũng	(Ngã tư Nguyễn Duy Dương-Vĩnh Viễn)	1	1
+3451	Quán Cơm 123	(123 Phố Huế)	1	1
+1143	Quán Cơm Đồng Nhân (Quán Bà Cả Đọi)	(42 Trương Định)	1	1
+2017	Quán Cơm Thu Hồng	(395/25 Hòa Hảo)	1	1
 
 Test case: sữa tươi
-1665	Sữa Đậu Nành	(Nguyễn Trãi Q5)	1	1
 1808	Sữa Tươi Chai	(Ngã Ba Trần Đình Xu Và Cao Bá Nhạ)	1	1
 2050	Sữa đậu nành bạc hà	(Trước cửa Chuà Bà Thiên Hậu)	1	1
 2981	Sữa Đậu Nành 2000	(Cuối Chợ Thủ Đức)	1	1
 3841	Chè Xoan nếp cẩm sữa chua	(Chợ đêm 23 Hàng Đường)	1	1
+1259	Quán Sữa Chua Trân Châu Hot & Cold	(208 Thành Thái)	1	1
+1665	Sữa Đậu Nành	(Nguyễn Trãi Q5)	1	1
 
 Test case: bánh tráng
-2221	Bánh Tráng Trảng Bàng	(Góc Ngã Tư Nguyễn Hữu Cầu	1	1
-186	Bánh Tráng Hoàng Ty	(106 Cao Thắng)	1	1
-2643	bánh tráng trộn	(trước cổng trường Nguyễn Du	1	1
-821	Bánh Tráng Cuộn	(F5)	1	1
-2751	Bánh Tráng Đông Du	(Hồ Văn Huê)	1	1
 836	Bánh tráng trộn Mix	(L22 Tân Vĩnh)	1	1
 2945	Bánh Tráng Trộn	(Ngã Ba Ngô Thời Nhiệm – Nam Kỳ Khởi Nghĩa.)	1	1
 971	Bánh Tráng Hoàng Ty	(459	1	1
@@ -40,67 +36,69 @@ Test case: bánh tráng
 1100	Bánh Tráng Phơi Sương Trảng Bàng	(Nguyễn Tri Phương (Xem Ban Do))	1	1
 4154	Bánh Tráng Thịt Heo Trần	(334 Hải Phòng)	1	1
 1411	Bánh Tráng Trộn	(Đối diện cà phê Sao)	1	1
+2151	Bánh Tráng Trảng Bàng	(441 Nguyễn Tri Phương)	1	1
+2221	Bánh Tráng Trảng Bàng	(Góc Ngã Tư Nguyễn Hữu Cầu	1	1
+186	Bánh Tráng Hoàng Ty	(106 Cao Thắng)	1	1
+2643	bánh tráng trộn	(trước cổng trường Nguyễn Du	1	1
+821	Bánh Tráng Cuộn	(F5)	1	1
+2751	Bánh Tráng Đông Du	(Hồ Văn Huê)	1	1
 
 Test case: bánh mì
-2806	Cửa Hàng Bánh Mì	(Bên Cạnh Karaoke Art)	1	1
-311	Bánh Mì King Baguetteria ( Bánh Mì Vua)	(457a Trần Hưng Đạo)	1	1
-1258	Bánh Mì Bami Deli	(01-03 Trà Khúc)	1	1
-1731	Bánh Mì Nguyễn Lâm	(Trên Đườngng Nguyễn Lâm Gần 3/2)	1	1
-2369	Bánh Mì Bạch Mai	(167 Võ Văn Ngân)	1	1
-3160	Bánh Mì Hòa Mã	(53 Cao Thắng, Q3, tp HCM)	1	1
-336	Cửa Hàng Bánh Mì Hà Nội	(83 85 Nguyễn Thiện Thuật)	1	1
-1276	Bánh Mì King Baguetteria	(261 Trần Quang Khải)	1	1
-1735	Bánh mì Minh Châu	(114 Hoàng Diệu)	1	1
-1815	Bánh mì Phá Lấu Thọ Phát	(78 Nguyễn Tri Phương)	1	1
-2416	Quán Bánh Mì Tây PMB Việt Nam	(158B Võ Thị Sáu)	1	1
-3175	Cửa Hàng Bánh mì Việt	(003, lô A2, Phan Xích Long, P7, Q Phú Nhuận)	1	1
-27	Bánh mì Tours Les Jours	(180 Hai Bà Trưng)	1	1
-395	Bánh Mì Tươi Bready	(99 Võ Văn Tần)	1	1
-1474	Bánh mì Hòa Mã	(Cao thắng gần ngã 4 Nguyễn đình chiểu)	1	1
-1878	Bánh Mì Gà Siêu Nhân	(26A Bàn Cờ)	1	1
-2420	Bánh Mì Tươi	(99 Võ Văn Tần)	1	1
-3200	Bánh Mì Ngã Tư Nguyễn Chí Thanh và Nguyễn Du	(góc ngã 4 Nguyễn Chí Thanh và Nguyễn Duy Duơng)	1	1
-70	Bánh Mì Pháp Onoré	(198 Cách Mạng Tháng 8)	1	1
-494	Bánh Mì Bamizon	(77 Hai Bà Trưng)	1	1
+3633	Bánh mì pate	thập cẩm	1	1
+80	Bánh Mì Tươi Bready	(62 Mạc Đỉnh Chi)	1	1
+539	Bánh Mì Bamizon	(9 Nguyễn Văn Chiêm)	1	1
+1577	Bánh Mì Giòn	(126 Cao Thắng)	1	1
+1924	Quán Bánh Mì Sáu Minh	(170 Võ Văn Tần)	1	1
+2458	DONER KEBAB ( BÁNH MÌ THỔ NHĨ KỲ )	(118 bùi viện)	1	1
+3865	Bánh Mì Tây	(Ngã 3 Lý Quốc Sư	1	1
+93	Bánh mì Như Lan	(50 Hàm Nghi)	1	1
+691	Bánh Mì Huỳnh Hoa	(Lê Thị Riêng)	1	1
+1583	Ăn Sáng Với Bánh Mì, Xôi Anh PhanBánh Bao,..	(164 Cống Quỳnh)	1	1
+1961	Bánh Mì Gbread	(93 Trần Đình Xu)	1	1
+2603	Bánh Mì Ngọc Hương	(15 17 Cách Mạng Tháng Tám)	1	1
+2736	Bánh Mì Long Cn 4	(10 Lê Văn Việt)	1	1
+4193	Bánh mì Đồng Tiến	(75-77 Phan Đăng Lưu)	1	1
+131	Bánh Mì Bamizon	(62 Phạm Ngọc Thạch)	1	1
+823	Bánh Mì Việt Baker	(55A1 Nguyễn Văn Đậu)	1	1
+1647	Bánh mì Ô Môi	(26 Lê Thị Riêng(gần ngã 6 Phù Đổng))	1	1
+2025	Bánh Mì Giòn (AGIÒN BAKERY)	(64 Điện Biên Phủ)	1	1
+2787	Bánh mì và Xôi gà Ngọc Châu	(194 đường Nguyễn Thiện Thuật)	1	1
+227	Cửa Hàng Bánh Mì Thịt Ta	(259 Lê Thánh Tôn)	1	1
 
 Test case: cơm tấm bụi
-1875	Quán Cơm Dinh Dưỡng	(Bùi Thị Xuân)	1	1
-3257	quán cơm Nguyêt Nga	(453/67 kb LE VAN SY)	1	1
-2297	Quán Cơm Minh Đức	(100 Tôn Thất Tùng)	1	1
-3674	Quán Cơm Ngon Miệng	(548 La Thành)	1	1
-2491	Quán Cơm Tấm Nguyễn Văn Cừ	(74A3 Nguyễn Văn Cừ)	1	1
-730	Quán Cơm Tấm Long An	(83 Trương Quốc Dung)	1	1
-4295	Quán Cơm Nam Thạnh Lầu	(50 Nguyễn Thị Minh Khai)	1	1
-2656	Quán Cơm Tám Đồng Xuân	(21 Trần Cao Vân)	1	1
-1143	Quán Cơm Đồng Nhân (Quán Bà Cả Đọi)	(42 Trương Định)	1	1
-2857	Quán cơm A Dũng	(Ngã tư Nguyễn Duy Dương-Vĩnh Viễn)	1	1
-1574	Quán Cơm Tấm Khánh Hội	(253 Khánh Hội)	1	1
-3106	Cơm Tấm	Bò Bít Tết	1	1
-1972	Quán Cơm tấm Tuệ Tĩnh	(48 Tuệ Tĩnh)	1	1
-3326	Nhà HàngTrống Cơm	(96 Trần Phú)	1	1
-2331	Nhà Hàng Cơm Tấm Hồ Gia	(28 Tôn Thất Tùng)	1	1
-3737	Qáun Cơm Nhà	(111 ngõ Núi Trúc)	1	1
-2502	Quán Cơm Tấm Thuận Kiều	(98 Ql 1a)	1	1
-740	Quán cơm sinh viên Sài Gòn	(7A/136 Thành Thái)	1	1
-2690	Quán Cơm 152	(152 Hồ Bá Kiện)	1	1
-1264	Cơm Tấm Mộc	(48 Lê Thánh Tôn)	1	1
+3451	Quán Cơm 123	(123 Phố Huế)	1	1
+2380	Quán Cơm tấm số 1	(150/5 Nguyễn Trãi)	1	1
+360	Cơm Tấm Mộc	(85 Lý Tự Trọng)	1	1
+4173	Nhà Hàng Cơm Việt	(7 Võ Văn Tần)	1	1
+2600	Quán Cơm Bò Sào Chua Ngọt	(Trần Đình Xu)	1	1
+908	Quán Cơm Số 7	(Góc Đường Lê Lai Nguyễn Văn Tráng)	1	1
+2759	Cơm Tấm Gà Rán DC	(9 Nguyễn Huy Điển)	1	1
+1387	Quán Cơm 350	(350 An Dương Vương)	1	1
+2965	Quán Cơm tấm 282	(282 Nguyễn Tri Phương)	1	1
+1697	Nhà Hàng Cơm Vua	(95C Nguyễn Thị Minh Khai)	1	1
+3150	Quán Cơm Bánh Thuẩn	(Ngã Tư Nguyễn Tri Phương – 3/2)	1	1
+2120	Quán cơm Kathy	(19 Bùi Thị Xuân)	1	1
+3459	Quán Cơm 123	(365 Kim Mã)	1	1
+2385	Cơm tấm thanh tâm	(U2 bàu cát 3)	1	1
+456	Quán Cơm 12H	(49 Trần Nhật Duật)	1	1
+4201	Quán Cơm 16	(77 Võ Văn Tần)	1	1
+2620	Quán Cơm Tấm Thu Thảo	(459-461 Lê Đại Hành)	1	1
+1006	Cơm tấm Bụi Sài Gòn	(378 Lê Văn Lương, P. Tân Hưng, Quận 7)	1	1
+2774	Cơm Tấm Hồ Bá Kiện	(góc Hồ Bá Kiện giao Tô Hiến Thành)	1	1
+1420	Quán Cơm Hoàng Vân 1	(46-47/3 Đông Tân)	1	1
 
 Test case: bánh tráng thịt heo
-2984	Bánh Tráng Phan Thiết	(ngã ba trường sơn, cư xá bắc hải với hồ bá kiện)	1	1
-186	Bánh Tráng Hoàng Ty	(106 Cao Thắng)	1	1
-4154	Bánh Tráng Thịt Heo Trần	(334 Hải Phòng)	1	1
-821	Bánh Tráng Cuộn	(F5)	1	1
 971	Bánh Tráng Hoàng Ty	(459	1	1
 1100	Bánh Tráng Phơi Sương Trảng Bàng	(Nguyễn Tri Phương (Xem Ban Do))	1	1
 2151	Bánh Tráng Trảng Bàng	(441 Nguyễn Tri Phương)	1	1
 2221	Bánh Tráng Trảng Bàng	(Góc Ngã Tư Nguyễn Hữu Cầu	1	1
+2751	Bánh Tráng Đông Du	(Hồ Văn Huê)	1	1
+2984	Bánh Tráng Phan Thiết	(ngã ba trường sơn, cư xá bắc hải với hồ bá kiện)	1	1
+186	Bánh Tráng Hoàng Ty	(106 Cao Thắng)	1	1
+4154	Bánh Tráng Thịt Heo Trần	(334 Hải Phòng)	1	1
+821	Bánh Tráng Cuộn	(F5)	1	1
 
 Test case: kfc
-1588	KFC Nguyễn Thái Học	(đường Nguyễn Thái Học)	1	1
-35	Cửa Hàng Thức Ăn Nhanh KFC Gà Rán	(74/2 Hai Bà Trưng)	1	1
-1868	Cửa Hàng Thức Ăn Nhanh KFC	(199a Nam Kỳ Khởi Nghĩa)	1	1
-571	KFC Lê Lai	(76-78 Lê Lai)	1	1
-2032	KFC Nguyễn Sơn	(111 Nguyễn Sơn P.Phú Thạnh Q. Tân Phú)	1	1
 584	Cửa Hàng Thức Ăn Nhanh KFC Gà Rán	(125 Đinh Tiên Hoàng)	1	1
 2185	KFC Âu Cơ	(265 Âu Cơ)	1	1
 636	Cửa Hàng Thức Ăn Nhanh KFC Xa Lộ Hà Nội	(Coop Mart Xa Lộ Hà Nội)	1	1
@@ -108,32 +106,84 @@ Test case: kfc
 1014	KFC Văn Lang	(1 Quang Trung)	1	1
 3475	Nhà Hàng KFC	(292 Bà Triệu)	1	1
 1335	KFC Tân Sơn Nhì	(232 Tân Sơn Nhì P.Tân Sơn Nhì Q.Tân Phú)	1	1
+1440	KFC Vinatex	(1/2 Lãnh Binh Thăng)	1	1
+1588	KFC Nguyễn Thái Học	(đường Nguyễn Thái Học)	1	1
+35	Cửa Hàng Thức Ăn Nhanh KFC Gà Rán	(74/2 Hai Bà Trưng)	1	1
+1868	Cửa Hàng Thức Ăn Nhanh KFC	(199a Nam Kỳ Khởi Nghĩa)	1	1
+571	KFC Lê Lai	(76-78 Lê Lai)	1	1
+2032	KFC Nguyễn Sơn	(111 Nguyễn Sơn P.Phú Thạnh Q. Tân Phú)	1	1
 
 Test case: thức ăn nhanh kfc
-1868	Cửa Hàng Thức Ăn Nhanh KFC	(199a Nam Kỳ Khởi Nghĩa)	2	2
 584	Cửa Hàng Thức Ăn Nhanh KFC Gà Rán	(125 Đinh Tiên Hoàng)	2	2
 636	Cửa Hàng Thức Ăn Nhanh KFC Xa Lộ Hà Nội	(Coop Mart Xa Lộ Hà Nội)	2	2
+35	Cửa Hàng Thức Ăn Nhanh KFC Gà Rán	(74/2 Hai Bà Trưng)	2	2
+1868	Cửa Hàng Thức Ăn Nhanh KFC	(199a Nam Kỳ Khởi Nghĩa)	2	2
+405	Nhà hàng thức ăn nhanh Lotteria	(2 Nguyễn Hữu Cầu)	1	1
+1014	KFC Văn Lang	(1 Quang Trung)	1	1
+2032	KFC Nguyễn Sơn	(111 Nguyễn Sơn P.Phú Thạnh Q. Tân Phú)	1	1
+571	KFC Lê Lai	(76-78 Lê Lai)	1	1
+1098	Nhà hàng thức ăn nhanh Lotteria	(18a 3/2)	1	1
+2185	KFC Âu Cơ	(265 Âu Cơ)	1	1
+1117	Thức ăn nhanh Rita Italian	(189c Cống Quỳnh (Lau 1 Sieu Thi Coopmart Cong Quynh))	1	1
+2377	KFC Ngô Gia Tự	(1-3 Ngô Gia Tự Phường 3 Quân 10 Tp.HCM)	1	1
+1335	KFC Tân Sơn Nhì	(232 Tân Sơn Nhì P.Tân Sơn Nhì Q.Tân Phú)	1	1
+2758	Thức ăn nhanh Dung Hạnh	(22gh Ngô Tất Tố)	1	1
 704	Cửa Hàng Thức Ăn Nhanh Jolli Bee	(118A Đinh Tiên Hoàng)	1	1
 1440	KFC Vinatex	(1/2 Lãnh Binh Thăng)	1	1
 2957	Cửa Hàng Thức ăn nhanh Jollibee	(230 Nguyễn Trãi)	1	1
 911	Cửa Hàng Thức ăn nhanh Jollibee	(Ngã tư CaoThắng- Nguyễn Đình Chiểu)	1	1
 1588	KFC Nguyễn Thái Học	(đường Nguyễn Thái Học)	1	1
 3239	Cửa hàng thức ăn nhanh Doyota	(233 Phan Đình Phùng, Phường 15 , Phú Nhuận, Tp Hồ Chí Minh)	1	1
-3475	Nhà Hàng KFC	(292 Bà Triệu)	1	1
-932	Cửa Hàng Thức Ăn Nhanh Jollibee	(354	1	1
-1733	Cửa Hàng Thức Ăn Nhanh Patiô	(152 Nam Kỳ Khởi Nghĩa)	1	1
-3510	Cửa Hàng Thức Ăn Nhanh Lotteria	(41 Thái Hà)	1	1
-120	Cửa Hàng Thức ăn nhanh Jollibee	(194D Pasteur)	1	1
-980	Cửa Hàng Thức Ăn Nhanh Lotteria	(95A Trần Hưng Đạo)	1	1
-405	Nhà hàng thức ăn nhanh Lotteria	(2 Nguyễn Hữu Cầu)	1	1
-1014	KFC Văn Lang	(1 Quang Trung)	1	1
-2032	KFC Nguyễn Sơn	(111 Nguyễn Sơn P.Phú Thạnh Q. Tân Phú)	1	1
-571	KFC Lê Lai	(76-78 Lê Lai)	1	1
-1098	Nhà hàng thức ăn nhanh Lotteria	(18a 3/2)	1	1
 
 Test case: miền đồng thảo
-No result found
+4	Cafe Miền Đồng Thảo	(221A Nguyễn Trọng Tuyển)	1	1
+
 Test case: sỏi đá
-No result found
+28	Cafe Sỏi Đá	(6b Ngô Thời Nhiệm)	1	1
+
 Test case: đông phương
-No result found
+24	Nhà Hàng Đông Phương	(32 Hoàng Việt)	1	1
+904	Nhà hàng Paris Đông Phương	(110 Cách Mạng Tháng Tám)	1	1
+1891	Cafe Sân Vườn Phương Đông	(102 Quang Trung)	1	1
+2365	Quán Cafe Phương Đông	(25/2F Quang Trung)	1	1
+4382	Câu Cá Đông Phương	(Khu Câu Cá Bình Quới)	1	1
+5621	Hoa Tươi Phương Đông	Dalat Hasfarm	1	1
+6539	Khách Sạn Đông Phương 2	(96A4 Trần Phú)	1	1
+6554	Khách Sạn Phương Đông	(97 Phan Chu Trinh)	1	1
+
+Test case: mien dong thao
+4	Cafe Miền Đồng Thảo	(221A Nguyễn Trọng Tuyển)	1	1
+
+Test case: soi da
+28	Cafe Sỏi Đá	(6b Ngô Thời Nhiệm)	1	1
+
+Test case: hu tieu mi
+544	Quán Hủ tiếu Minh Phát	(54 Huỳnh Mẫn Đạt)	1	1
+570	Quán Hủ Tiếu Mì Đạt Phong	(124 Phan Văn Trị)	1	1
+1311	Hủ Tiếu Mì Bảy Dưỡng 1	(89 Vạn Kiếp)	1	1
+2073	Hủ tiếu mì Lưu xá	(Nguyễn Tiểu La)	1	1
+2482	Hủ Tiếu Mì	Hoành Thánh	1	1
+3190	Hủ Tiếu Mì Sườn 103	(103 Nguyễn Tiểu La)	1	1
+
+Test case: com ga
+142	Cơm Gà Hồng Xương	(173 Lê Văn Sỹ)	1	1
+162	Cơm Gà Hải Nam	Văn Xương	1	1
+221	Cơm Gà Hồng Xương	(357 Nguyễn Trãi)	1	1
+249	Cơm Gà Xối Mỡ Hoàng Kỳ	(427A Lê Quang Định)	1	1
+306	Cơm Gà Xối Mỡ 142	(142 Ba Đình)	1	1
+397	Cơm Gà 16	(117 Võ Văn Tần)	1	1
+489	Cơm Gà Xối Mỡ Vương	(45 Cô Giang)	1	1
+574	Quán Cơm Gà Hải Nam	(934 Trần Hưng Đạo)	1	1
+628	Cơm Gà Đông Nguyên	(89 -91 Châu Văn Liêm P.14 Q.5)	1	1
+720	Quán Cơm gà Bà Luận Tam Kỳ	(43 B1 Chu văn An (Không rỏ nữa))	1	1
+743	Cơm Gà Hải Nam	(379-379 Nguyễn Tri Phương)	1	1
+930	Quán Cơm Gà Xối Mỡ	(121 Trần Hưng Đạo)	1	1
+1051	Quán Cơm Gà Hải Nam	(212 Trần Quang Khải)	1	1
+1074	Cơm Gà Hồng Phát	(381 Hai Bà Trưng)	1	1
+1146	Quán Cơm Gà Hồng Phát	(Hoàng Văn Thụ)	1	1
+1346	Quán Cơm gà cali	(246-248 Pasteur)	1	1
+1357	Cơm Gà Hồng Thắng	(378 Hai Bà Trưng)	1	1
+1458	Cơm Gà Bà Luận Tam Kỳ	(30 Hồ Tùng Mậu)	1	1
+1789	Cơm gà Hòa Bình	(280G Phạm Thế Hiển)	1	1
+1836	Cơm Gà Hồng Xương	(SG81 Cảnh Viên1 Khu Nam Viên)	1	1
+

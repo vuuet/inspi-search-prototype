@@ -1,5 +1,6 @@
 package org.inspilab.prototype.search;
 
+import java.awt.Component;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -63,14 +64,10 @@ public class Main
 		{	
 			String SQL = getQueryStatement(queryString, config);
 			
-			System.out.println(SQL);
-			
 			Statement stmt = config.getConnection().createStatement();
 			
 			ResultSet rs = stmt.executeQuery(SQL);
-			
-			System.out.println(rs.next());
-			
+				
 			while(rs.next())
 			{				
 				String[] newResult = new String[5];
@@ -81,12 +78,6 @@ public class Main
 				newResult[3] = rs.getString(4);
 				newResult[4] = rs.getString(5);
 				
-				/*newResult[0] = rs.getString("id");
-				newResult[1] = rs.getString("name");
-				newResult[2] = rs.getString("address");
-				newResult[3] = rs.getString("total_score");
-				newResult[4] = rs.getString("importancy");
-				*/
 				resultSet.add(newResult);
 			}
 			
@@ -218,19 +209,15 @@ public class Main
 		
 		if(queryArr.size() == 0)
 		{
-			sqlStatement = 
+			/*	sqlStatement = 
 				"select P.id, name, address from place as P, (" +
-				getAlternateSQLStatement(queryString) + ") as S where P.id = S.id";
+				getAlternateSQLStatement(queryString) + ") as S where P.id = S.id";*/
 
-			/*
-			sqlStatement = 
-			"select P.id, name, address, 1 as total_score, 1 as importancy from place as P, (" +
-			getAlternateSQLStatement(queryString) + ") as S where P.id = S.id";
-			*/
+			sqlStatement = 	getAlternateSQLStatement(queryString, 0);
 		}
 		else
 		{
-			String alternateSLQ = getAlternateSQLStatement(queryString);
+			String alternateSLQ = getAlternateSQLStatement(queryString, 1);
 			
 			String docmtAttributeVector = "(";
 			
@@ -280,21 +267,74 @@ public class Main
 		return sqlStatement;
 	}
 	
-	public static String getAlternateSQLStatement(String complementaryPart)
+	public static String getAlternateSQLStatement(String complementaryPart, int type)
 	{
 		String result = "";
 		
 		if(!complementaryPart.isEmpty())
 		{
 			String[] complementaryComponent = complementaryPart.split(" ");
-			String likeStatment = "complementary_value like \"%" + complementaryComponent[0] + "%\"";
 			
-			for(int i = 1; i < complementaryComponent.length; i++)
+			if(type == 0)
 			{
-				likeStatment += " and complementary_value like \"%" + complementaryComponent[i] + "%\"";	
+				String likeStatement = "";
+				
+				if(complementaryComponent[0].contains("d"))
+				{
+					String replacement = complementaryComponent[0].replace("d", "đ");
+					likeStatement = "(name like '%" + complementaryComponent[0] + "%'" + " or name like '%" + replacement + "%')";
+				}
+				else
+				{
+					likeStatement = "name like '%" + complementaryComponent[0] + "%'";
+				}
+				
+				
+				for(int i = 1; i < complementaryComponent.length; i++)
+				{
+					if(complementaryComponent[i].contains("d"))
+					{
+						String replacement = complementaryComponent[i].replace("d", "đ");
+						likeStatement += " and (name like '%" + complementaryComponent[i] + "%'" + " or name like '%" + replacement + "%')";
+					}
+					else
+					{
+						likeStatement += " and name like '%" + complementaryComponent[i] + "%'";
+					}
+				}
+				
+				result = "select id, name, address, 1 as total_score, 1 as importancy from place where " + likeStatement;
 			}
 			
-			result = "select id from place_complementary where " + likeStatment;
+			if(type == 1)
+			{
+				String likeStatement = "";
+				
+				if(complementaryComponent[0].contains("d"))
+				{
+					String replacement = complementaryComponent[0].replace("d", "đ");
+					likeStatement = "(complementary_value like '%" + complementaryComponent[0] + "%'" + " or complementary_value like '%" + replacement + "%')";
+				}
+				else
+				{
+					likeStatement = "complementary_value like '%" + complementaryComponent[0] + "%'";
+				}
+				
+				for(int i = 1; i < complementaryComponent.length; i++)
+				{
+					if(complementaryComponent[i].contains("d"))
+					{
+						String replacement = complementaryComponent[i].replace("d", "đ");
+						likeStatement += " and (complementary_value like '%" + complementaryComponent[i] + "%'" + " or complementary_value like '%" + replacement + "%')";
+					}
+					else
+					{
+						likeStatement += " and complementary_value like '%" + complementaryComponent[i] + "%'";
+					}
+				}
+				
+				result = "select id from place_complementary where " + likeStatement;
+			}
 		}
 
 		return result;
