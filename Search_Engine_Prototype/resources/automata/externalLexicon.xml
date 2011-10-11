@@ -2,310 +2,291 @@
 <corpus id="resources/automata/externalLexicon.xml">
     <body>
 		<w>Hà nội</w>
-		<w>﻿bánh mì</w>
-		<w>bánh mì pháp</w>
-		<w>bánh mì tươi</w>
-		<w>bánh mì giòn</w>
-		<w>bánh khọt</w>
-		<w>bánh pizza</w>
-		<w>bánh xèo</w>
-		<w>bánh tráng</w>
-		<w>bánh tráng cuộn</w>
-		<w>bánh tráng phơi sương</w>
-		<w>bánh tráng trộn</w>
-		<w>bánh tráng thịt heo</w>
-		<w>bánh đúc</w>
-		<w>bánh bèo</w>
-		<w>bánh kem</w>
-		<w>bánh bao</w>
+		<w>bia đức</w>
 		<w>bánh bao lề đường</w>
-		<w>bánh căn</w>
+		<w>bánh bèo</w>
+		<w>bánh bèo bì</w>
 		<w>bánh canh</w>
+		<w>bánh canh cua</w>
+		<w>bánh caramen</w>
+		<w>bánh cookie</w>
+		<w>bánh cuốn lá</w>
+		<w>bánh cuốn nóng</w>
+		<w>bánh căn</w>
 		<w>bánh flan</w>
 		<w>bánh flan dừa</w>
 		<w>bánh flan trái dừa</w>
-		<w>bánh cuốn</w>
-		<w>bánh cuốn nóng</w>
-		<w>bánh cuốn lá</w>
-		<w>bánh canh</w>
-		<w>bánh canh cua</w>
-		<w>bánh pía</w>
-		<w>pánh pía sóc trăng</w>
-		<w>bánh trung thu</w>
-		<w>bánh hỏi</w>
+		<w>bánh kem</w>
 		<w>bánh khọt</w>
-		<w>bánh nậm</w>
+		<w>bánh khọt</w>
+		<w>bánh mì giòn</w>
+		<w>bánh mì pháp</w>
+		<w>bánh mì tươi</w>
+		<w>bánh pizza</w>
+		<w>bánh pía</w>
+		<w>bánh tráng cuộn</w>
+		<w>bánh tráng phơi sương</w>
+		<w>bánh tráng thịt heo</w>
+		<w>bánh tráng trộn</w>
 		<w>bánh tầm bì</w>
-		<w>bánh đa</w>
-		<w>bánh ướt</w>
-		<w>bánh caramen</w>
-		<w>bánh cookie</w>
-		<w>trà sữa</w>
-		<w>nem chua</w>
-		<w>nem chua nướng</w>
-		<w>nem tré</w>
-		<w>lẩu băng chuyền</w>
-		<w>lẩu dê</w>
-		<w>lẩu hải sản</w>
-		<w>lẩu bò</w>
-		<w>lẩu cá kèo</w>
-		<w>lẩu cua</w>
-		<w>lẩu tôm</w>
-		<w>lẩu phở bò</w>
-		<w>lẩu không khói</w>
-		<w>lẩu sinh viên</w>
-		<w>lẩu mắm</w>
-		<w>lẩu trăn</w>
-		<w>lẩu nấm</w>
-		<w>lẩu nấm chay</w>
-		<w>lẩu lươn</w>
-		<w>lẩu cua đồng</w>
-		<w>thức ăn nhanh</w>
-		<w>cơm niêu</w>
-		<w>cơm gà</w>
-		<w>cơm gà hải nam</w>
-		<w>cơm gà xối mỡ</w>
-		<w>cơm tấm</w>
-		<w>cơm tấm bụi</w>
-		<w>cơm chay</w>
-		<w>cơm tấm gà rán</w>
-		<w>cơm trưa văn phòng</w>
-		<w>cơm chay tịnh</w>
-		<w>cơm tấm bò</w>
-		<w>cơm văn phòng</w>
-		<w>cơm hến</w>
-		<w>mì hàn quốc</w>
+		<w>bánh xèo miền trung</w>
+		<w>bê thui</w>
+		<w>bì cuốn</w>
+		<w>bít tết</w>
+		<w>bít tết</w>
+		<w>bò bía</w>
+		<w>bò bít tết</w>
+		<w>bò bằm</w>
+		<w>bò kho</w>
+		<w>bò lá lốt</w>
+		<w>bò né</w>
+		<w>bò nướng</w>
+		<w>bò tùng sẻo</w>
+		<w>bò tơ</w>
+		<w>bò viên</w>
+		<w>bò xào</w>
+		<w>bún bò cay</w>
+		<w>bún bò huế</w>
+		<w>bún bò viên</w>
+		<w>bún bò viên</w>
+		<w>bún cari</w>
+		<w>bún chả cá</w>
+		<w>bún cà ri</w>
+		<w>bún cá</w>
+		<w>bún cá</w>
 		<w>bún cá châu đốc</w>
+		<w>bún giò heo</w>
+		<w>bún mắm</w>
+		<w>bún mộc</w>
+		<w>bún nem nướng</w>
+		<w>bún riêu</w>
+		<w>bún riêu bò</w>
+		<w>bún riêu cua</w>
+		<w>bún riêu giò heo</w>
+		<w>bún sườn</w>
+		<w>bún sứa</w>
+		<w>bún thịt nướng</w>
+		<w>bún đậu mắm tôm</w>
 		<w>bún ốc</w>
-		<w>bún ốc cổ</w>
 		<w>bún ốc chuối đậu</w>
-		<w>hoa quả dầm</w>
-		<w>ốc hút</w>
-		<w>chè thái nguyên</w>
-		<w>ốc cay</w>
-		<w>sushi</w>
-		<w>sushi que</w>
-		<w>phở chua</w>
-		<w>phở nghêu</w>
-		<w>phở miến gà</w>
-		<w>phở bò</w>
-		<w>phở đà điểu</w>
-		<w>phở gà</w>
-		<w>phở vỉa hè</w>
-		<w>sữa đậu nành</w>
-		<w>sữa tươi</w>
-		<w>sữa đậu nành bạc hà</w>
-		<w>sữa chua</w>
-		<w>sâm lạnh</w>
-		<w>bội chiên mềm</w>
-		<w>cá viên cà ri</w>
-		<w>cà ri dê</w>
-		<w>càri dê</w>
-		<w>tào phớ</w>
+		<w>bún ốc cổ</w>
 		<w>bắp nướng</w>
 		<w>bắp xào</w>
-		<w>chuối chiên</w>
-		<w>bia đỏ</w>
-		<w>bia hơi</w>
-		<w>bia đức</w>
-		<w>há cảo</w>
-		<w>cá viên</w>
-		<w>cút lộn</w>
-		<w>sủi cảo</w>
-		<w>thịt nướng</w>
-		<w>thịt cầy nồi đất</w>
-		<w>bò bít tết</w>
-		<w>hột vịt lộn xào me</w>
-		<w>hột gà nướng</w>
-		<w>cút chiên bơ</w>
-		<w>bò né</w>
-		<w>bò lá lốt</w>
-		<w>bò nướng</w>
-		<w>bò kho</w>
-		<w>nộm bò khô</w>
-		<w>gà hấp hèm</w>
-		<w>gà vườn</w>
-		<w>chân gà nướng</w>
-		<w>trứng gà nướng</w>
-		<w>gà rán</w>
-		<w>vịt quay</w>
-		<w>vịt quay bắc kinh</w>
-		<w>bê thui</w>
-		<w>dừa tươi</w>
-		<w>dừa tắc</w>
-		<w>frozen yogurt</w>
-		<w>nước sâm</w>
-		<w>cà phê sân vườn</w>
-		<w>lợn sữa quay</w>
-		<w>heo sữa quay</w>
-		<w>sinh tố</w>
-		<w>sinh tố kem</w>
-		<w>kem ký</w>
-		<w>kem nhãn</w>
-		<w>kem chiên</w>
-		<w>kem tươi</w>
-		<w>lẩu kem</w>
-		<w>kem trái cây</w>
-		<w>kem ý</w>
-		<w>hủ tiếu xào</w>
-		<w>hủ tiếu xa tế</w>
-		<w>hủ tiếu sườn</w>
-		<w>hủ tiếu nam vang</w>
-		<w>hử tiếu bò kho</w>
-		<w>hủ tiếu bò viên</w>
-		<w>hủ tiếu mì</w>
-		<w>hủ tiếu chay</w>
-		<w>hủ tiếu nám tộc</w>
-		<w>hủ tiếu mì sườn</w>
-		<w>phá lấu bò</w>
-		<w>hủ tíu mì sườn</w>
-		<w>hủ tíu mì sa tế</w>
-		<w>hủ tíu nam vang</w>
-		<w>hủ tíu bò viên</w>
-		<w>bún bò huế</w>
-		<w>bún riêu</w>
-		<w>bún chả cá</w>
-		<w>bún thịt nướng</w>
-		<w>bún nem nướng</w>
+		<w>bội chiên mềm</w>
+		<w>bột chiên</w>
+		<w>bột chiên</w>
 		<w>canh bún</w>
-		<w>bún chả</w>
-		<w>bún bò viên</w>
-		<w>bún cá</w>
-		<w>bún bò</w>
-		<w>bún mộc</w>
-		<w>bún riêu bò</w>
-		<w>bún riêu giò heo</w>
-		<w>bún mắm</w>
-		<w>bún giò heo</w>
-		<w>bún bò viên</w>
-		<w>bún sườn</w>
-		<w>bún đậu mắm tôm</w>
-		<w>bún cá</w>
-		<w>bún riêu cua</w>
-		<w>bún bò cay</w>
-		<w>chè thái</w>
-		<w>chè nam bộ</w>
-		<w>chè tàu</w>
-		<w>chè mè đen</w>
-		<w>chè lục tàu xá</w>
+		<w>chuối chiên</w>
+		<w>cháo bầu</w>
+		<w>cháo cá</w>
+		<w>cháo dinh dưỡng</w>
+		<w>cháo gỏi vịt</w>
+		<w>cháo hào</w>
+		<w>cháo lươn</w>
+		<w>cháo mực</w>
+		<w>cháo thập cẩm</w>
+		<w>cháo trai</w>
+		<w>cháo trắng</w>
+		<w>cháo vịt</w>
+		<w>chân gà nướng</w>
 		<w>chè bưởi</w>
 		<w>chè chuối</w>
 		<w>chè chuối nướng</w>
-		<w>chè nóng</w>
-		<w>thạch chè</w>
-		<w>chè yến</w>
-		<w>chè sinh tố</w>
-		<w>chè trái cây</w>
 		<w>chè huế</w>
+		<w>chè lục tàu xá</w>
+		<w>chè mè đen</w>
+		<w>chè nam bộ</w>
+		<w>chè nóng</w>
+		<w>chè sinh tố</w>
+		<w>chè thái</w>
+		<w>chè thái nguyên</w>
+		<w>chè trái cây</w>
+		<w>chè tàu</w>
 		<w>chè xoan</w>
-		<w>xôi gà xà xíu</w>
-		<w>xôi lá chuối</w>
-		<w>xôi bắp</w>
-		<w>xôi gà</w>
-		<w>xôi xiêm</w>
-		<w>xôi mặn</w>
-		<w>xồi xá xíu</w>
-		<w>xôi chiên</w>
-		<w>xôi chả cua</w>
-		<w>mì xào</w>
-		<w>mì gà giòn</w>
-		<w>mì ý</w>
-		<w>mì sủi cảo</w>
-		<w>mì xào bò</w>
-		<w>mì quảng</w>
-		<w>mì nhật</w>
-		<w>mì lạnh</w>
-		<w>mì gà</w>
-		<w>cháo hào</w>
-		<w>cháo lòng</w>
-		<w>cháo gỏi vịt</w>
-		<w>cháo vịt</w>
-		<w>cháo trắng</w>
-		<w>cháo thập cẩm</w>
-		<w>cháo lươn</w>
-		<w>cháo dinh dưỡng</w>
-		<w>miến vịt</w>
-		<w>miến gà</w>
+		<w>chè yến</w>
+		<w>chả cá</w>
+		<w>chả mực</w>
+		<w>chả rươi</w>
+		<w>cà phê sân vườn</w>
+		<w>cà ri dê</w>
+		<w>càri dê</w>
+		<w>cá viên</w>
+		<w>cá viên chiên</w>
+		<w>cá viên cà ri</w>
+		<w>cút chiên bơ</w>
+		<w>cút lộn</w>
+		<w>cơm chay</w>
+		<w>cơm chay tịnh</w>
+		<w>cơm chiên dương châu</w>
+		<w>cơm gà</w>
+		<w>cơm gà hải nam</w>
+		<w>cơm gà xối mỡ</w>
+		<w>cơm hến</w>
+		<w>cơm niêu</w>
+		<w>cơm trưa văn phòng</w>
+		<w>cơm tấm</w>
+		<w>cơm tấm bò</w>
+		<w>cơm tấm bụi</w>
+		<w>cơm tấm gà rán</w>
+		<w>cơm văn phòng</w>
+		<w>cầy tơ</w>
+		<w>dừa tươi</w>
+		<w>dừa tắc</w>
+		<w>frozen yogurt</w>
+		<w>giò chả</w>
+		<w>gà hấp hèm</w>
+		<w>gà nướng</w>
+		<w>gà rán</w>
+		<w>gà ta</w>
+		<w>gà ta</w>
+		<w>gà vườn</w>
+		<w>gỏi bò</w>
+		<w>gỏi bò bía</w>
+		<w>gỏi khô bò</w>
+		<w>gỏi vịt</w>
+		<w>heo sữa quay</w>
+		<w>hoa quả dầm</w>
+		<w>há cảo</w>
+		<w>há cảo</w>
+		<w>hải sản</w>
+		<w>hột gà</w>
+		<w>hột gà nướng</w>
+		<w>hột vịt</w>
+		<w>hột vịt lộn xào me</w>
+		<w>hủ tiếu 1</w>
+		<w>hủ tiếu bò viên</w>
+		<w>hủ tiếu chay</w>
+		<w>hủ tiếu gõ</w>
+		<w>hủ tiếu mì</w>
+		<w>hủ tiếu mì sườn</w>
+		<w>hủ tiếu nam vang</w>
+		<w>hủ tiếu nám tộc</w>
+		<w>hủ tiếu sa tế</w>
+		<w>hủ tiếu sườn</w>
+		<w>hủ tiếu xa tế</w>
+		<w>hủ tiếu xào</w>
+		<w>hủ tíu</w>
+		<w>hủ tíu bò viên</w>
+		<w>hủ tíu mì sa tế</w>
+		<w>hủ tíu mì sườn</w>
+		<w>hủ tíu nam vang</w>
+		<w>hủ tiếu bò kho</w>
+		<w>kem chiên</w>
+		<w>kem ký</w>
+		<w>kem nhãn</w>
+		<w>kem trái cây</w>
+		<w>kem tươi</w>
+		<w>kem ý</w>
+		<w>lá chuối</w>
+		<w>lẩu bò</w>
+		<w>lẩu băng chuyền</w>
+		<w>lẩu cua</w>
+		<w>lẩu cua đồng</w>
+		<w>lẩu cá</w>
+		<w>lẩu cá kèo</w>
+		<w>lẩu dê</w>
+		<w>lẩu dê núi</w>
+		<w>lẩu hải sản</w>
+		<w>lẩu kem</w>
+		<w>lẩu không khói</w>
+		<w>lẩu lươn</w>
+		<w>lẩu mắm</w>
+		<w>lẩu nấm</w>
+		<w>lẩu nấm chay</w>
+		<w>lẩu phở bò</w>
+		<w>lẩu sinh viên</w>
+		<w>lẩu thái</w>
+		<w>lẩu thỏ</w>
+		<w>lẩu trăn</w>
+		<w>lẩu tôm</w>
+		<w>lẩu vịt</w>
+		<w>lợn sữa quay</w>
 		<w>miến cua</w>
+		<w>miến cua</w>
+		<w>miến gà</w>
 		<w>miến lươn</w>
 		<w>miến trộn</w>
-		<w>miến cua</w>
-		<w>nước sâm</w>
-		<w>nước mía</w>
-		<w>nước ép</w>
-		<w>trái cây</w>
-		<w>nước mía siêu sạch</w>
-		<w>nước ép</w>
-		<w>nước gạo rang</w>
-		<w>súp cua</w>
-		<w>giò chả</w>
-		<w>chả cá</w>
-		<w>chả mực</w>	
-		<w>phá lấu</w>
-		<w>gà nướng</w>
-		<w>cơm lam</w>
-		<w>lẩu thái</w>
-		<w>sân vườn</w>
-		<w>lá chuối</w>
-		<w>ốc mắm sữa</w>
-		<w>ốc móng tay</w>
-		<w>rau đắng</w>
-		<w>tàu hủ đá</w>
-		<w>thịt heo nướng</w>
-		<w>mì phá lấu</w>
-		<w>gỏi bò</w>
-		<w>cháo cá</w>
-		<w>bột chiên</w>
-		<w>gà ta</w>
-		<w>cá viên chiên</w>
-		<w>bánh xèo miền trung</w>
-		<w>gà ta</w>
-		<w>cháo bầu</w>
-		<w>bò bía</w>
-		<w>lẩu thỏ</w>
-		<w>thịt thỏ</w>
-		<w>gỏi bò bía</w>
-		<w>vịt tiềm</w>
-		<w>mì vịt tiềm</w>
-		<w>sương sa</w>
-		<w>trái dừa</w>
-		<w>mực nướng</w>
-		<w>gỏi khô bò</w>
-		<w>bún sứa</w>
-		<w>bánh bèo bì</w>
-		<w>thỏ nướng</w>
-		<w>cháo mực</w>
-		<w>hủ tiếu sa tế</w>
-		<w>mì vịt tiềm</w>
-		<w>ốc dừa</w>
-		<w>gỏi vịt</w>
-		<w>cơm chiên dương châu</w>
-		<w>bò tơ</w>
-		<w>thịt cầy</w>
-		<w>sâm bổ lượng</w>
-		<w>bún cari</w>
-		<w>bún cà ri</w>
-		<w>ăn vặt</w>
-		<w>lẩu cá</w>
-		<w>hủ tiếu gõ</w>
-		<w>thịt chó</w>
-		<w>bò bằm</w>
-		<w>bò xào</w>
-		<w>lẩu dê núi</w>
-		<w>bì cuốn</w>
-		<w>cầy tơ</w>
-		<w>nước mía dâu</w>
-		<w>mì xào giòn</w>
-		<w>bò viên</w>
-		<w>bít tết</w>
-		<w>lẩu vịt</w>
-		<w>cháo trai</w>
-		<w>bò tùng sẻo</w>
-		<w>chả rươi</w>
+		<w>miến vịt</w>
 		<w>miến xào</w>
+		<w>mì gà</w>
+		<w>mì gà giòn</w>
+		<w>mì hàn quốc</w>
+		<w>mì lạnh</w>
+		<w>mì nhật</w>
+		<w>mì phá lấu</w>
+		<w>mì quảng</w>
+		<w>mì sủi cảo</w>
+		<w>mì vịt tiềm</w>
+		<w>mì vịt tiềm</w>
+		<w>mì xào</w>
+		<w>mì xào bò</w>
+		<w>mì xào giòn</w>
+		<w>mì ý</w>
+		<w>mực nướng</w>
+		<w>nem chua nướng</w>
 		<w>nem nướng</w>
+		<w>nem tré</w>
+		<w>nước gạo rang</w>
+		<w>nước mía</w>
+		<w>nước mía dâu</w>
+		<w>nước mía siêu sạch</w>
+		<w>nước sâm</w>
+		<w>nước sâm</w>
+		<w>nước ép</w>
+		<w>nước ép trái cây</w>
+		<w>nộm bò khô</w>
+		<w>phá lấu</w>
+		<w>phá lấu</w>
+		<w>phá lấu bò</w>
+		<w>phở bò</w>
+		<w>phở chua</w>
+		<w>phở gà</w>
+		<w>phở miến gà</w>
+		<w>phở nghêu</w>
+		<w>phở vỉa hè</w>
+		<w>phở đà điểu</w>
+		<w>pánh pía sóc trăng</w>
+		<w>rau đắng</w>
+		<w>sinh tố kem</w>
+		<w>sushi que</w>
+		<w>sâm bổ lượng</w>
+		<w>sâm lạnh</w>
+		<w>sân vườn</w>
+		<w>súp cua</w>
+		<w>sương sa</w>
+		<w>sủi cảo</w>
+		<w>sữa đậu nành bạc hà</w>
+		<w>thạch chè</w>
+		<w>thịt chó</w>
+		<w>thịt cầy</w>
+		<w>thịt cầy nồi đất</w>
+		<w>thịt heo nướng</w>
+		<w>thịt nướng</w>
+		<w>thịt thỏ</w>
+		<w>thỏ nướng</w>
+		<w>thức ăn nhanh</w>
+		<w>trà sữa</w>
+		<w>trái dừa</w>
+		<w>trứng gà nướng</w>
+		<w>tàu hủ đá</w>
 		<w>tôm khô</w>
-		<w>miền tây</w>
-		<w>gỏi cuốn</w>
+		<w>vịt quay</w>
+		<w>vịt quay bắc kinh</w>
+		<w>vịt tiềm</w>
+		<w>xôi bắp</w>
+		<w>xôi chiên</w>
+		<w>xôi chả cua</w>
+		<w>xôi gà</w>
+		<w>xôi gà xà xíu</w>
+		<w>xôi lá chuối</w>
+		<w>xôi mặn</w>
+		<w>xôi xiêm</w>
+		<w>xồi xá xíu</w>
+		<w>ăn vặt</w>
+		<w>ốc cay</w>
+		<w>ốc dừa</w>
+		<w>ốc hút</w>
+		<w>ốc móng tay</w>
+		<w>ốc mắm sữa</w>
     </body>
 </corpus>
