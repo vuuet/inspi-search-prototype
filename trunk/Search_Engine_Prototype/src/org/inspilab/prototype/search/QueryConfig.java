@@ -22,7 +22,7 @@ public class QueryConfig
 	private String dbName;
 	private String dbUsername;
 	private String dbPassword;
-	private static String foodFilePath;
+	private static String keywordFilePath;
 	private static String districtFilePath;
 	private static String wardFilePath;
 	private static String streetFilePath;
@@ -30,7 +30,7 @@ public class QueryConfig
 	private static String keywordMatrixFilePath;
 	private Connection con;
 	private static VietTokenizer vnTokEngine;	
-	private static ArrayList<String> foodFeature;
+	private static ArrayList<String> keywordFeature;
 	private static ArrayList<String> districtFeature;
 	private static ArrayList<String> wardFeature;
 	private static ArrayList<String> streetFeature;
@@ -40,14 +40,14 @@ public class QueryConfig
 	public QueryConfig(int type)
 	{
 		vnTokEngine = new VietTokenizer();
-		foodFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "foodList.txt";
+		keywordFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "keywordList.txt";
 		districtFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "districtList.txt";
 		wardFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "wardList.txt";
 		streetFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "streetList.txt";
 		complementaryFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "complementaryList.txt";
 		keywordMatrixFilePath = "." + File.separatorChar + "feature" + File.separatorChar + "keywordMatrix.txt";
 		
-		foodFeature = readFileToArrayList(foodFilePath);
+		keywordFeature = readFileToArrayList(keywordFilePath);
 		districtFeature = readFileToArrayList(districtFilePath);
 		wardFeature = readFileToArrayList(wardFilePath);
 		streetFeature = readFileToArrayList(streetFilePath);
@@ -229,8 +229,8 @@ public class QueryConfig
 		return vnTokEngine;
 	}
 	
-	public ArrayList<String> getFoodFeature() {
-		return foodFeature;
+	public ArrayList<String> getKeywordFeature() {
+		return keywordFeature;
 	}
 		
 	public ArrayList<String> getDistrictFeature() {
@@ -277,14 +277,14 @@ public class QueryConfig
 		return dbUsername;
 	}
 
-	public void setFoodFilePath(String inputFoodFilePath) {
-		foodFilePath = inputFoodFilePath;
+	public void setFoodFilePath(String inpuKeywordFilePath) {
+		keywordFilePath = inpuKeywordFilePath;
 		
-		foodFeature = readFileToArrayList(foodFilePath);
+		keywordFeature = readFileToArrayList(keywordFilePath);
 	}
 
-	public String getFoodFilePath() {
-		return foodFilePath;
+	public String getKeywordFilePath() {
+		return keywordFilePath;
 	}
 
 	public void setWardFilePath(String inputWardFilePath) {

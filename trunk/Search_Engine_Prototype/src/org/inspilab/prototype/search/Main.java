@@ -1,9 +1,7 @@
 package org.inspilab.prototype.search;
 
-import java.awt.Component;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -11,18 +9,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
-import java.net.ServerSocket;
-import java.net.Socket;
+import java.sql.BatchUpdateException;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-
-import net.sf.json.JSONArray;
 
 import uk.ac.shef.wit.simmetrics.similaritymetrics.QGramsDistance;
 import vn.hus.nlp.tokenizer.VietTokenizer;
@@ -44,7 +40,7 @@ public class Main
 				output += resultSet.get(i)[0] + "\t" 
 							+ resultSet.get(i)[1] + "\t"
 							+ resultSet.get(i)[2] + "\t"
-							+ resultSet.get(i)[4] + "\t"
+							+ resultSet.get(i)[3] + "\t"
 							+ resultSet.get(i)[4] + "\n";
 			}
 		}
@@ -64,6 +60,8 @@ public class Main
 		{	
 			String SQL = getQueryStatement(queryString, config);
 			
+			System.out.println(SQL);
+			
 			Statement stmt = config.getConnection().createStatement();
 			
 			ResultSet rs = stmt.executeQuery(SQL);
@@ -72,11 +70,11 @@ public class Main
 			{				
 				String[] newResult = new String[5];
 				
-				newResult[0] = rs.getString(1);
-				newResult[1] = rs.getString(2);
-				newResult[2] = rs.getString(3);
-				newResult[3] = rs.getString(4);
-				newResult[4] = rs.getString(5);
+				newResult[0] = rs.getString("id");
+				newResult[1] = rs.getString("name");
+				newResult[2] = rs.getString("address");
+				newResult[3] = rs.getString("total_score");
+				newResult[4] = rs.getString("importancy");
 				
 				resultSet.add(newResult);
 			}
@@ -123,7 +121,7 @@ public class Main
 			queryString = queryString.replace(numberFeatureFromQuery, "");
 		}
 		
-		ArrayList<String[]> foodFeatureFromQuery = foodFeature(queryString, config.getFoodFeature(), config.getVnTokEngine());
+		ArrayList<String[]> foodFeatureFromQuery = keywordFeature(queryString, config.getKeywordFeature(), config.getVnTokEngine());
 		for(int i = 0; i < foodFeatureFromQuery.size(); i++)
 		{
 			result.add(foodFeatureFromQuery.get(i)[0]);
@@ -182,16 +180,16 @@ public class Main
 			queryString = queryString.replace(numberFeatureFromQuery, "");
 		}
 		
-		ArrayList<String[]> foodFeatureFromQuery = foodFeature(queryString, config.getFoodFeature(), config.getVnTokEngine());
-		for(int i = 0; i < foodFeatureFromQuery.size(); i++)
+		ArrayList<String[]> keywordFeatureFromQuery = keywordFeature(queryString, config.getKeywordFeature(), config.getVnTokEngine());
+		for(int i = 0; i < keywordFeatureFromQuery.size(); i++)
 		{
-			queryArr.add(foodFeatureFromQuery.get(i)[0]);
+			queryArr.add(keywordFeatureFromQuery.get(i)[0]);
 			
-			String replacement = foodFeatureFromQuery.get(i)[1].replace("_", " ");
+			String replacement = keywordFeatureFromQuery.get(i)[1].replace("_", " ");
 			queryString = queryString.replace(replacement, "");
 		}
 		
-		ArrayList<String> relatedLocation = getRelatedLocation(foodFeatureFromQuery, config);
+		ArrayList<String> relatedLocation = getRelatedLocation(keywordFeatureFromQuery, config);
 		for(int i = 0; i < relatedLocation.size(); i++)
 		{
 			queryArr.add(relatedLocation.get(i));
@@ -199,7 +197,7 @@ public class Main
 		
 		queryString = queryString.trim();
 
-		//Old version of get complementary part 3 - 10 - 2011, using like statment instead
+		//Old version of get complementary part 3 - 10 - 2011, using like statement instead
 		/*String complementaryPartFromQuery = getComplementaryFeatureID(queryString, config.getComplementaryFeature());
 		if(!complementaryPartFromQuery.isEmpty())
 		{
@@ -340,20 +338,20 @@ public class Main
 		return result;
 	}
 	
-	public static ArrayList<String> alphaTest_addLocation(String locationInfo, QueryConfig config)
+	public static ArrayList<String> alphaTest_addLocation(String[] placeInfo, QueryConfig config)
 	{
 		ArrayList<String> resultSet = null;
 		
-		resultSet = runInsertStatement(locationInfo, config);
+		resultSet = runInsertStatement(placeInfo, config);
 		
 		return resultSet;
 	}
 	
-	public static ArrayList<String> runInsertStatement(String locationInfo, QueryConfig config)
+	public static ArrayList<String> runInsertStatement(String[] placeInfo, QueryConfig config)
 	{
 		ArrayList<String> resultSet = new ArrayList<String>();
 		
-		ArrayList<String> queryArr = getInsertStatement(locationInfo, config);
+		ArrayList<String> queryArr = getInsertStatement(placeInfo, config);
 
 		try 
 		{	
@@ -377,10 +375,139 @@ public class Main
 		return resultSet;
 	}
 	
-	public static ArrayList<String> getInsertStatement(String locationInfo, QueryConfig config)
+	public static void insertLocation(QueryConfig config)
+	{	
+		try 
+		{
+			
+			Calendar currentDate = Calendar.getInstance();
+			
+			SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy HH:mm:ss");
+			SimpleDateFormat formatter2 = new SimpleDateFormat("dd-MM-yyyy_HH-mm-ss");
+			
+			String dateNow = formatter.format(currentDate.getTime());
+			String dateNow2 = formatter2.format(currentDate.getTime());
+			
+			BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("InsertLog_" + dateNow2), "UTF-8"));
+			
+			String sql = "select id, name, address from place where id in " +
+						"(select id from place where id not in (select distinct place_id from place_attribute_value));";
+			
+			Statement stmt = config.getConnection().createStatement();
+			
+			ResultSet rs = stmt.executeQuery(sql);
+			
+			writer.write("Running Batch Place Insert at " + dateNow + "\n");
+			
+			while(rs.next())
+			{
+				String[] placeInfo = new String[3];
+				placeInfo[0] = rs.getString("id");
+				placeInfo[1] = rs.getString("name");
+				placeInfo[2] = rs.getString("address");
+				
+				insertLocationWithBatchStatement(placeInfo, config, writer);
+			}
+			
+			writer.close();
+			rs.close();
+			stmt.close();
+								
+		} 
+		catch (UnsupportedEncodingException e) 
+		{
+			e.printStackTrace();
+		} 
+		catch (FileNotFoundException e) 
+		{
+			e.printStackTrace();
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+		catch (SQLException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public static void checkUpdateStatus(int[] updateCounts, ArrayList<String> insertStatement, BufferedWriter writer) 
+	{
+		try
+		{
+			for (int i = 0; i < updateCounts.length; i++) 
+			{
+				if (updateCounts[i] == Statement.EXECUTE_FAILED) 
+				{	
+					writer.write(insertStatement.get(i) + "\n");
+				}
+			}
+		}
+		catch(IOException e)
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	public static void insertLocationWithBatchStatement(String[] placeInfo, QueryConfig config, BufferedWriter writer)
+	{
+		Connection conn = config.getConnection();
+		Statement stmt = null;	
+		
+		ArrayList<String> insertStatements = getInsertStatement(placeInfo, config);
+		
+		try 
+		{
+			conn.setAutoCommit(false);
+			stmt = conn.createStatement();
+			for(int i = 0; i < insertStatements.size(); i++)
+			{
+				stmt.addBatch(insertStatements.get(i));
+			}
+			
+			stmt.executeBatch();
+			conn.commit();
+			
+		} 
+		catch (BatchUpdateException e)
+		{
+			try
+			{
+				writer.write("PlaceID: " + placeInfo[0] + " - Name: " + placeInfo[1] + " - Address: " + placeInfo[2] + "\n");
+				writer.write("Error insert statement at: ");
+				
+				int[] updateCounts = e.getUpdateCounts();
+				checkUpdateStatus(updateCounts, insertStatements, writer);
+				
+				conn.rollback();
+			}
+			catch (Exception e1)
+			{
+				e1.printStackTrace();
+			}
+			
+		}
+		catch (SQLException e) 
+		{
+			e.printStackTrace();
+		}
+		finally
+		{
+			try 
+			{
+				stmt.close();
+			} 
+			catch (SQLException e) 
+			{
+				e.printStackTrace();
+			}
+		}
+	}
+
+	public static ArrayList<String> getInsertStatement(String[] placeInfo, QueryConfig config)
 	{
 		ArrayList<String> result = new ArrayList<String>();
-		//ArrayList<String> newKeyword = new ArrayList<String>();
 		
 		DataContainer insertStatement = new DataContainer();
 		insertStatement.setContainerName("place_attribute_value");
@@ -388,7 +515,9 @@ public class Main
 		String[] values = new String[5];
 		
 		//component[0] = place_id, component[1] = place_name, component[2] = place_address;
-		String[] component = locationInfo.split(" - ");
+		String[] component = placeInfo;
+		component[1] = component[1].toLowerCase();
+		component[2] = component[2].toLowerCase();
 		
 		if(component.length < 3)
 		{
@@ -396,14 +525,14 @@ public class Main
 		}
 		
 		//id - keyword - frequency
-		ArrayList<String[]> foodFeatureFromPlace = foodFeature(component[1], config.getFoodFeature(), config.getVnTokEngine());
+		ArrayList<String[]> keywordFeatureFromPlace = keywordFeature(component[1], config.getKeywordFeature(), config.getVnTokEngine());
 		
-		for(int i = 0; i < foodFeatureFromPlace.size(); i++)
+		for(int i = 0; i < keywordFeatureFromPlace.size(); i++)
 		{
 			values = new String[5];
 					
 			values[0] = component[0];
-			values[1] = foodFeatureFromPlace.get(i)[0];
+			values[1] = keywordFeatureFromPlace.get(i)[0];
 			values[2] = "1";
 			values[3] = "5";
 			values[4] = "1";
@@ -412,7 +541,7 @@ public class Main
 			
 			result.add(insertStatement.toInsertStatement());
 			
-			String replacement = foodFeatureFromPlace.get(i)[1].replace("_", " ");
+			String replacement = keywordFeatureFromPlace.get(i)[1].replace("_", " ");
 			component[1] = component[1].replace(replacement, "");
 		}
 		
@@ -503,7 +632,7 @@ public class Main
 		return result;
 	}
  	
-	public static ArrayList<String> getInsertStatement_test(String locationInfo, QueryConfig config)
+	public static ArrayList<String> getInsertStatement_Outputtest(String locationInfo, QueryConfig config)
 	{
 		ArrayList<String> result = new ArrayList<String>();
 		//ArrayList<String> newKeyword = new ArrayList<String>();
@@ -522,7 +651,7 @@ public class Main
 		}
 		
 		//id - keyword - frequency
-		ArrayList<String[]> foodFeatureFromPlace = foodFeature(component[1], config.getFoodFeature(), config.getVnTokEngine());
+		ArrayList<String[]> foodFeatureFromPlace = keywordFeature(component[1], config.getKeywordFeature(), config.getVnTokEngine());
 		
 		String keywordInfo;
 		
@@ -890,7 +1019,7 @@ public class Main
 		return output;
 	}
 
-	public static ArrayList<String[]> foodFeature(String line, ArrayList<String> foodList, VietTokenizer vnTokEngine)
+	public static ArrayList<String[]> keywordFeature(String line, ArrayList<String> keywordList, VietTokenizer vnTokEngine)
 	{
 		ArrayList<String[]> output = new ArrayList<String[]>();
 		
@@ -916,14 +1045,14 @@ public class Main
 			
 			if(flag == 0)
 			{
-				for(int j = 0; j < foodList.size(); j++)
+				for(int j = 0; j < keywordList.size(); j++)
 				{
-					if(wordArr[i].equals(foodList.get(j)))
+					if(wordArr[i].equals(keywordList.get(j)))
 					{
 						String[] result = new String[3];
 						
 						result[0] = "1" + (j + 1);
-						result[1] = foodList.get(j);
+						result[1] = keywordList.get(j);
 						result[2] = "1";
 
 						output.add(result);
@@ -1029,7 +1158,132 @@ public class Main
 		return insertStatement.toInsertStatement();
 	}
 	
+	public static String preProcessing(String queryString)
+	{
+		String result;
+		
+		result = queryString.replace("@", "");
+		result = queryString.replace("!", "");
+		result = queryString.replace("#", "");
+		result = queryString.replace("$", "");
+		result = queryString.replace("%", "");
+		result = queryString.replace("^", "");
+		result = queryString.replace("&", "");
+		result = queryString.replace("*", "");
+		result = queryString.replace("(", "");
+		result = queryString.replace(")", "");
+		result = queryString.replace("_", "");
+		result = queryString.replace("-", "");
+		result = queryString.replace("+", "");
+		result = queryString.replace("=", "");
+		result = queryString.replace("`", "");
+		result = queryString.replace("~", "");
+		result = queryString.replace("'", "");
+		
+		return result;
+	}
+	
 	public static void main(String[] args)
+	{ 
+		QueryConfig config = new QueryConfig(0);
+		
+		insertLocation(config);
+	}
+	
+	/*
+	public static void main(String[] args)
+	{ 	
+		QueryConfig config = new QueryConfig(4);
+		
+		int port = 21010;
+		
+		ServerSocket listenSock = null;
+		Socket sock = null;
+		
+		try 
+		{
+			listenSock = new ServerSocket(port);
+			
+			while(true)
+			{
+				sock = listenSock.accept();
+				
+				BufferedReader reader = new BufferedReader(new InputStreamReader(sock.getInputStream(), "UTF-8"));
+				BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(sock.getOutputStream(), "UTF-8"));
+				
+				String line = null;
+				String queryResult = null;
+				ArrayList<String> locationResult = null;
+				
+				while((line = reader.readLine()) != null)
+				{	
+					int br = 0;
+					
+					if(line.endsWith("/end"))
+					{
+						line = line.replace("/end", "");
+						br = 1;
+					}
+					
+					if(line.startsWith("/q/"))
+					{
+						queryResult = getQueryStatement(line.replace("/q/", ""), config);
+						
+						writer.write(queryResult + "\n");
+						writer.flush();
+					}
+					
+					if(line.startsWith("/i/"))
+					{
+						locationResult = alphaTest_addLocation(line.replace("/i/", ""), config);
+						
+						if(locationResult.isEmpty())
+						{
+							writer.write("0" + "\n");
+							writer.flush();
+						}
+						else
+						{
+							String result = new String();
+							for(int i = 0; i < locationResult.size(); i++)
+							{
+								if(i == 0)
+								{
+									result += locationResult.get(i);
+								}
+								else
+								{
+									result += "/qi/" + locationResult.get(i);
+								}
+							}
+							
+							result += "\n";
+							
+							writer.write(result);
+							writer.flush();
+						}
+					}
+
+					if(br == 1)
+					{
+						break;
+					}
+				}
+				
+				reader.close();
+				writer.close();
+				sock.close();
+			}
+		} 
+		catch (IOException e) 
+		{
+			e.printStackTrace();
+		}
+	}
+	
+	*/
+
+	/*public static void main(String[] args)
 	{		
 		QueryConfig config = new QueryConfig(0);
 		
@@ -1058,7 +1312,7 @@ public class Main
 			writer = new BufferedWriter(outputStream);
 			
 			String line = null;
-					
+							
 			try
 			{
 				reader.readLine();
@@ -1066,13 +1320,8 @@ public class Main
 				while((line = reader.readLine()) != null)
 				{	
 					line = line.toLowerCase();
-					
-					if(!line.isEmpty())
-					{
-						writer.write("Test case: " + line + "\n");
-						writer.write(alphaTest(line, config) + "\n");
-					}
-	
+					writer.write("Test case: " + line + "\n");
+					writer.write(alphaTest(line, config) + "\n");
 				}		
 			}
 			finally
@@ -1086,8 +1335,7 @@ public class Main
 			ex.printStackTrace();	
 		}
 	
-	}
-
+	}*/
 	
 	/*
 	public static void main(String[] args)
