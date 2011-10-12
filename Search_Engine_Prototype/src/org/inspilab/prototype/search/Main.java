@@ -236,31 +236,72 @@ public class Main
 			if(!alternateSLQ.isEmpty())
 			{
 				sqlStatement = 
-					"select K.id, K.name, K.address, K.total_score, K.importancy from " +	
+					"SELECT P.id, P.name, P.address, importancy, keyword_score, comty_score, T.code " +
+					"FROM " +
+					"( " +
+						"( " +
+							"SELECT place_id, sum( score ) AS keyword_score, sum( importancy ) AS importancy FROM " +
+							"`place_attribute_value` " +
+							"WHERE attribute_id " +
+							"IN " + docmtAttributeVector + " " +
+							"GROUP BY place_id " +
+						") AS K " +
+						"LEFT JOIN " +
+						"(" + alternateSLQ + ") as C on K.place_id = C.id " +
+					") " +
+					"JOIN place as P ON place_id = P.id " +
+					"JOIN place_topic_relationship as PTR ON P.id = PTR.place_id " +
+					"JOIN topic as T ON PTR.topic_id = T.id " +
+					"group by P.id " +  
+					"order by importancy desc, keyword_score desc, comty_score desc";
+					
+				/*
+					"select K.id, K.name, K.address, K.importancy, K.total_score, C.score from " +	
 					"(" +
 						"select P.id, P.name, P.address, total_score, importancy from place as P,	" +
 						"(" +
-							"select place_id, sum(score) total_score, sum(importancy) as importancy " +
+							"select place_id, sum(score) as total_score, sum(importancy) as importancy " +
 							"from `place_attribute_value` where attribute_id in "	+				
 							docmtAttributeVector + " group by place_id" +
 						") as S where P.id = S.place_id" +
 					") as K " +
-					"inner join " +
+					"left join " +
 					"(" + alternateSLQ + ") as C using (id) " +
-					"order by importancy desc, total_score desc";
+					"order by importancy desc, total_score desc, score desc";
+				*/
 			}
 			else
 			{
-				sqlStatement = 
-					"select P.id, P.name, P.address, total_score, importancy from place as P,	" +
+				sqlStatement =
+					
+					"SELECT P.id, P.name, P.address, importancy, keyword_score, T.code " +
+					"FROM " +
+					"(" +
+						"SELECT place_id, sum( score ) AS keyword_score, sum( importancy ) AS importancy FROM " +
+						"`place_attribute_value` " +
+						"WHERE attribute_id " +
+						"IN " + docmtAttributeVector + " " +
+						"GROUP BY place_id " +
+					") AS K " + 
+					"JOIN place as P ON place_id = P.id " +
+					"JOIN place_topic_relationship as PTR ON P.id = PTR.place_id " +
+					"JOIN topic as T ON PTR.topic_id = T.id " +
+					"group by P.id " +
+					"order by importancy desc, keyword_score desc";
+				
+					/*
+					"select P.id, P.name, P.address, importancy, total_score from place as P,	" +
 						"(" +
-							"select place_id, sum(score) total_score, sum(importancy) as importancy " +
+							"select place_id, sum(score) as total_score, sum(importancy) as importancy " +
 							"from `place_attribute_value` where attribute_id in "	+				
 							docmtAttributeVector + " group by place_id" +
 						") as S where P.id = S.place_id " +
 					"order by importancy desc, total_score desc";
+					*/
 			}
 		}
+		
+		
 		
 		return sqlStatement;
 	}
@@ -331,7 +372,20 @@ public class Main
 					}
 				}
 				
-				result = "select id from place_complementary where " + likeStatement;
+				result = 
+					"SELECT P.id, P.name, P.address, T.code " +
+					"FROM " +
+					"(" +
+						"SELECT id " +
+						"FROM place_complementary " +
+						"WHERE " + likeStatement +
+					" ) " + 
+					"AS C " +
+					"JOIN place as P ON C.id = P.id " +
+					"JOIN place_topic_relationship as PTR ON P.id = PTR.place_id " +
+					"JOIN topic as T ON PTR.topic_id = T.id " +
+					"group by P.id";
+					/*"select id, 1 as score from place_complementary where " + likeStatement;*/
 			}
 		}
 
