@@ -1,0 +1,1 @@
+Mining website for information and use that info for searching
